@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
-<title>Alezz Aldumaini – AI Engineer & CEO</title>
+<title>Alezz Aldumaini – AI Engineer</title>
 <style>
 :root{--bg:#060a12;--surface:#0d1525;--card:#111927;--accent:#00d4ff;--accent2:#7c3aed;--accent3:#06ffa5;--text:#e2e8f0;--muted:#8892a4;--border:rgba(0,212,255,0.15);}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -177,7 +177,7 @@ body.rtl .hero-badge{flex-direction:row-reverse;}
 body.rtl .hero-btns{flex-direction:row-reverse;}
 body.rtl .hero-stats{flex-direction:row-reverse;}
 body.rtl .about-grid{direction:rtl;}
-body.rtl .info-row{flex-direction:row-reverse;}
+body.rtl .info-row{flex-direction:row;}
 body.rtl .timeline{padding-left:0;padding-right:2.5rem;}
 body.rtl .timeline::before{left:auto;right:0;}
 body.rtl .tl-item::before{left:auto;right:-2.62rem;}
@@ -203,7 +203,8 @@ body.rtl .hero-badge { flex-direction: row-reverse; }
 body.rtl .hero-btns { flex-direction: row-reverse; }
 body.rtl .hero-stats { flex-direction: row-reverse; }
 body.rtl .about-grid { direction: rtl; }
-body.rtl .info-row { flex-direction: row-reverse; }
+body.rtl .info-row { flex-direction: row; }
+body.rtl .info-row .lbl { margin-right: 0; margin-left: auto; }
 body.rtl .timeline { padding-left: 0; padding-right: 2.5rem; }
 body.rtl .timeline::before { left: auto; right: 0; }
 body.rtl .tl-item::before { left: auto; right: -2.62rem; }
@@ -272,8 +273,8 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
     <div class="hero-inner">
     <div class="hero-layout">
       <div class="hero-text">
-        <div class="hero-badge"><span class="dot"></span>Open to opportunities · CEO &amp; Founder @ Suraya AI</div>
-        <div class="hero-role">Artificial Intelligence Engineer &amp; CEO</div>
+        <div class="hero-badge"><span class="dot"></span>Open to opportunities · AI Engineer</div>
+        <div class="hero-role">Artificial Intelligence Engineer</div>
         <h1><span class="name">Alezz Aldumaini</span></h1>
         <p class="hero-sub" id="typedText"></p>
         <div class="hero-btns">
@@ -327,16 +328,15 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
   <h2>About Me</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm <strong>Alezz Aldumaini</strong>, an Artificial Intelligence Engineer and the <strong>CEO & Founder of Suraya AI</strong>, based in Tabuk, Saudi Arabia. I design, build, and deploy full-stack AI systems — from backend infrastructure and AI pipelines to production-ready web platforms.</p>
-      <p>My work spans the full AI stack: I built <strong>Lumiq</strong>, an end-to-end LLM-powered educational platform with RAG, multi-role dashboards, and AI tutoring; <strong>MentorX</strong>, a personalized learning assistant with adaptive study plans and multimodal summarization; a fine-tuned <strong>CodeT5 + LoRA</strong> model for automated code debugging; a <strong>Voice AI Agent</strong> with wake word detection, real-time STT, emotional TTS, and persistent memory; and a <strong>Multi-Agent Research System</strong> where specialized AI agents collaborate to produce research reports.</p>
-      <p>I've also developed AI systems for vehicle damage detection, aspect-based sentiment analysis using RoBERTa, and dental disease diagnosis combining YOLOv8 and EfficientNetV2 with Grad-CAM explainability.</p>
-      <p>As a founder, I don't just imagine the future of AI — I build it. I'm driven by a clear mission: to engineer intelligent systems that solve real problems at scale.</p>
+      <p>I'm <strong>Alezz Aldumaini</strong> — an AI Engineer who believes the best way to understand intelligence is to build it, with hands-on experience building real AI systems from scratch.</p>
+      <p>I've designed and shipped full-stack AI applications: RAG pipelines, fine-tuned LLMs, computer vision models, and multi-agent systems. I don't just study AI — I apply it to problems that matter.</p>
+      <p>If you're building something ambitious with AI — let's talk.</p>
     </div>
     <div class="info-card">
       <h3>Quick Info</h3>
-      <div class="info-row"><span class="lbl">📍 Location</span><span>Tabuk, Saudi Arabia</span></div>
-      <div class="info-row"><span class="lbl">🏢 Company</span><a href="https://aalezz.github.io/suraya-ai/" target="_blank" style="color:var(--accent);text-decoration:none;">Suraya AI</a></div>
-      <div class="info-row"><span class="lbl">💼 Role</span><span>CEO & Founder</span></div>
+      <div class="info-row"><span class="lbl">📍 Location</span><span>Saudi Arabia</span></div>
+      <div class="info-row"><span class="lbl">🚀 Venture</span><a href="https://aalezz.github.io/suraya-ai/" target="_blank" style="color:var(--accent);text-decoration:none;">Suraya AI</a></div>
+      <div class="info-row"><span class="lbl">💼 Role</span><span>AI Engineer & Founder</span></div>
       <div class="info-row"><span class="lbl">🎓 Degree</span><span>B.Sc. AI Engineering</span></div>
       <div class="info-row"><span class="lbl">🏫 University</span><span>Bahçeşehir University</span></div>
       <div class="info-row"><span class="lbl">🌐 Languages</span><span>AR · EN · TR</span></div>
@@ -443,11 +443,11 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
         <span class="proj-tag">Python</span><span class="proj-tag">FastAPI</span><span class="proj-tag">Claude API</span><span class="proj-tag">Multi-Agent</span><span class="proj-tag">Streaming</span><span class="proj-tag">AI Agents</span>
       </div>
     </div>
-    <div class="proj-card" data-cat="nlp">
+    <div class="proj-card" data-cat="nlp" style="display:none">
       <div class="proj-header">
         <div class="proj-icon">🔧</div>
         <div class="proj-title">
-          <h3>CodeT5 + LoRA — Code Debugger</h3>
+          <h3 class="hidden-proj">CodeT5 + LoRA — Code Debugger</h3>
           <div class="proj-date">05/2025 – 06/2025</div>
         </div>
       </div>
@@ -503,7 +503,7 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
     </div>
 
     <!-- VehicleDamage -->
-    <div class="proj-card" data-cat="cv">
+    <div class="proj-card" data-cat="cv" style="display:none">
       <div class="proj-header">
         <div class="proj-icon">🚗</div>
         <div class="proj-title">
@@ -522,7 +522,7 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
     </div>
 
     <!-- AspectSentiment -->
-    <div class="proj-card" data-cat="nlp">
+    <div class="proj-card" data-cat="nlp" style="display:none">
       <div class="proj-header">
         <div class="proj-icon">💬</div>
         <div class="proj-title">
@@ -561,7 +561,7 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
     </div>
 
 
-    <div class="proj-card" data-cat="cv">
+    <div class="proj-card" data-cat="cv" style="display:none">
       <div class="proj-header">
         <div class="proj-icon">👤</div>
         <div class="proj-title">
@@ -581,12 +581,12 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
     </div>
 
     <!-- Suraya AI -->
-    <div class="proj-card" data-cat="platform">
+    <div class="proj-card" data-cat="platform" style="display:none">
       <div class="proj-header">
         <div class="proj-icon">🏢</div>
         <div class="proj-title">
           <h3>Suraya AI — AI Company</h3>
-          <div class="proj-date">CEO & Founder</div>
+          <div class="proj-date">AI Startup · Founder</div>
         </div>
       </div>
       <ul class="proj-bullets">
@@ -600,6 +600,13 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
     </div>
 
   </div>
+
+  <div style="text-align:center;margin-top:2.2rem;">
+    <a href="https://github.com/Aalezz" target="_blank" style="display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2.2rem;background:var(--card);border:1px solid var(--border);border-radius:50px;color:var(--accent);text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s;" onmouseover="this.style.borderColor='var(--accent)';this.style.boxShadow='0 0 24px rgba(0,212,255,0.2)'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+      🐙 More Projects on GitHub
+    </a>
+  </div>
+
 </div>
 
 <!-- EXPERIENCE -->
@@ -610,19 +617,9 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
       <h2>Education & Experience</h2>
       <div class="timeline">
         <div class="tl-item">
-          <div class="tl-date">2021 – 2026</div>
-          <h3>B.Sc. Artificial Intelligence Engineering</h3>
-          <p>Bahçeşehir University · Istanbul, Turkey — Deep learning, NLP, computer vision, LLMs, and intelligent systems design.</p>
-        </div>
-        <div class="tl-item">
           <div class="tl-date">2026</div>
-          <h3>CEO & Founder — Suraya AI</h3>
-          <p>Founded and leading Suraya AI — building advanced AI platforms and intelligent systems to solve real-world challenges at scale.</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">2024</div>
-          <h3>Lumiq AI Platform</h3>
-          <p>Designed and built a full-stack AI educational platform end-to-end: LLM assistant, RAG pipeline, multi-role dashboards, document ingestion, and MongoDB architecture.</p>
+          <h3>Founder — Suraya AI</h3>
+          <p>Founded Suraya AI — building advanced AI platforms and intelligent systems to solve real-world challenges at scale.</p>
         </div>
         <div class="tl-item">
           <div class="tl-date">06/2025 – 07/2025</div>
@@ -635,9 +632,19 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
           <p>Parameter-efficient fine-tuning of CodeT5 for automated code debugging and correction using LoRA on PyTorch and HuggingFace.</p>
         </div>
         <div class="tl-item">
+          <div class="tl-date">2024</div>
+          <h3>Lumiq AI Platform</h3>
+          <p>Designed and built a full-stack AI educational platform end-to-end: LLM assistant, RAG pipeline, multi-role dashboards, document ingestion, and MongoDB architecture.</p>
+        </div>
+        <div class="tl-item">
           <div class="tl-date">2023 – 2024</div>
           <h3>AI Research Projects</h3>
           <p>VehicleDamageAI, AspectSentimentAI, and DentalDiagnosisAI — applying SOTA models to real-world vision and NLP problems.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021 – 2026</div>
+          <h3>B.Sc. Artificial Intelligence Engineering</h3>
+          <p>Bahçeşehir University · Istanbul, Turkey — Deep learning, NLP, computer vision, LLMs, and intelligent systems design.</p>
         </div>
       </div>
     </div>
@@ -711,11 +718,11 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
         <div class="contact-info">
           <p>I'm open to full-time AI engineering roles, research collaborations, and startup partnerships. Whether you want to build something together or just talk AI — let's connect.</p>
           <div class="c-links">
-            <a class="c-link" href="/cdn-cgi/l/email-protection#1a7b767f6060347b767e6f777b7374735a7d777b737634797577"><span class="ic">📧</span><span class="__cf_email__" data-cfemail="7e1f121b0404501f121a0b131f1710173e19131f1712501d1113">[email&#160;protected]</span></a>
+            <a class="c-link" href="mailto:alezz.aldumaini@gmail.com"><span class="ic">📧</span>alezz.aldumaini@gmail.com</a>
             <a class="c-link" href="https://www.linkedin.com/in/al-ezz-al-dumaini-718395312/" target="_blank"><span class="ic">💼</span>LinkedIn</a>
             <a class="c-link" href="https://github.com/Aalezz" target="_blank"><span class="ic">🐙</span>GitHub</a>
             <a class="c-link" href="https://aalezz.github.io/suraya-ai/" target="_blank"><span class="ic">🏢</span>Suraya AI</a>
-            <a class="c-link" href="#"><span class="ic">📍</span>Tabuk, Saudi Arabia</a>
+            <a class="c-link" href="#"><span class="ic">📍</span>Saudi Arabia</a>
           </div>
         </div>
         <div class="contact-form">
@@ -754,7 +761,7 @@ body:not(.rtl) .nav-inner { flex-direction: row; }
 </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let W, H, pts = [];
@@ -859,8 +866,8 @@ async function sendContactForm() {
 var T = {
   en: {
     nav:['About','Skills','Projects','Experience','Certifications','Contact'],
-    badge:'Open to opportunities \xb7 CEO & Founder @ Suraya AI',
-    role:'Artificial Intelligence Engineer & CEO',
+    badge:'Open to opportunities \xb7 AI Engineer',
+    role:'Artificial Intelligence Engineer',
     btn1:'View My Work', btn2:"Let's Talk",
     stats:['AI Projects','Years in AI','AI Startup Founded','Languages'],
     secLabels:['Who I am','What I work with',"What I've built",'My journey','Lifelong Learning',"Let's connect"],
@@ -871,17 +878,15 @@ var T = {
     filters:['All','NLP / LLMs','Computer Vision','Platforms','AI Agents'],
     footer:'\xa9 2026 <span>Alezz Aldumaini</span> \xb7 All rights reserved.',
     aboutPs:[
-      "I'm <strong>Alezz Aldumaini</strong>, an Artificial Intelligence Engineer and the <strong>CEO & Founder of Suraya AI</strong>, based in Tabuk, Saudi Arabia. I design, build, and deploy full-stack AI systems \u2014 from backend infrastructure and AI pipelines to production-ready web platforms.",
-      "My work spans the full AI stack: I built <strong>Lumiq</strong>, an end-to-end LLM-powered educational platform with RAG, multi-role dashboards, and AI tutoring; <strong>MentorX</strong>, a personalized learning assistant with adaptive study plans and multimodal summarization; a fine-tuned <strong>CodeT5 + LoRA</strong> model for automated code debugging; a <strong>Voice AI Agent</strong> with wake word detection, real-time STT, emotional TTS, and persistent memory; and a <strong>Multi-Agent Research System</strong> where specialized AI agents collaborate to produce research reports.",
-      "I've also developed AI systems for vehicle damage detection, aspect-based sentiment analysis using RoBERTa, and dental disease diagnosis combining YOLOv8 and EfficientNetV2 with Grad-CAM explainability.",
-      "As a founder, I don't just imagine the future of AI \u2014 I build it. I'm driven by a clear mission: to engineer intelligent systems that solve real problems at scale."
+      "I'm <strong>Alezz Aldumaini</strong> \u2014 an AI Engineer who believes the best way to understand intelligence is to build it, with hands-on experience building real AI systems from scratch.",
+      "I've designed and shipped full-stack AI applications: RAG pipelines, fine-tuned LLMs, computer vision models, and multi-agent systems. I don't just study AI \u2014 I apply it to problems that matter.",
+      "If you're building something ambitious with AI \u2014 let's talk."
     ],
-    infoLabels:['\ud83d\udccd Location','\ud83c\udfe2 Company','\ud83d\udcbc Role','\ud83c\udf93 Degree','\ud83c\udfe2 University','\ud83c\udf10 Languages','\u2705 Status'],
-    infoVals:['Tabuk, Saudi Arabia','Suraya AI','CEO & Founder','B.Sc. AI Engineering','Bah\xe7e\u015fehir University','AR \xb7 EN \xb7 TR','<span class="status-badge"><span class="dot"></span>Open to work</span>'],
+    infoLabels:['\ud83d\udccd Location','\ud83d\ude80 Venture','\ud83d\udcbc Role','\ud83c\udf93 Degree','\ud83c\udfe2 University','\ud83c\udf10 Languages','\u2705 Status'],
+    infoVals:['Saudi Arabia','Suraya AI','AI Engineer & Founder','B.Sc. AI Engineering','Bah\xe7e\u015fehir University','AR \xb7 EN \xb7 TR','<span class="status-badge"><span class="dot"></span>Open to work</span>'],
     typing:["I don't just imagine the future of AI \u2014 I build it.","From LLM pipelines to full-stack AI platforms.","Engineering intelligent systems that solve real problems."],
     timeline:[
-      {date:'2021 - 2026', title:'B.Sc. Artificial Intelligence Engineering', desc:'Bahcesehir University - Istanbul, Turkey - Deep learning, NLP, computer vision, LLMs, and intelligent systems design.'},
-      {date:'2026', title:'CEO & Founder - Suraya AI', desc:'Founded and leading Suraya AI - building advanced AI platforms and intelligent systems to solve real-world challenges at scale.'},
+      {date:'2026', title:'Founder - Suraya AI', desc:'Founded and leading Suraya AI - building advanced AI platforms and intelligent systems to solve real-world challenges at scale.'},
       {date:'2024', title:'Lumiq AI Platform', desc:'Designed and built a full-stack AI educational platform end-to-end: LLM assistant, RAG pipeline, multi-role dashboards, document ingestion, and MongoDB architecture.'},
       {date:'06/2025 - 07/2025', title:'MentorX - Personalized Learning Assistant', desc:'Full-stack AI adaptive learning platform with multimodal summarization, custom quiz generation, and adaptive study plans powered by LLMs.'},
       {date:'05/2025 - 06/2025', title:'CodeT5 + LoRA Fine-tuning', desc:'Parameter-efficient fine-tuning of CodeT5 for automated code debugging and correction using LoRA on PyTorch and HuggingFace.'},
@@ -902,13 +907,12 @@ var T = {
     filters:['\u0627\u0644\u0643\u0644','\u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0644\u063a\u0629 / LLMs','\u0631\u0624\u064a\u0629 \u062d\u0627\u0633\u0648\u0628\u064a\u0629','\u0627\u0644\u0645\u0646\u0635\u0627\u062a','\u0648\u0643\u0644\u0627\u0621 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a'],
     footer:'\xa9 2026 <span>\u0627\u0644\u0639\u0632 \u0627\u0644\u062f\u0645\u064a\u0646\u064a</span> \xb7 \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629.',
     aboutPs:[
-      '\u0623\u0646\u0627 <strong>\u0627\u0644\u0639\u0632 \u0627\u0644\u062f\u0645\u064a\u0646\u064a</strong>\u060c \u0645\u0647\u0646\u062f\u0633 \u0630\u0643\u0627\u0621 \u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0648<strong>\u0627\u0644\u0631\u0626\u064a\u0633 \u0627\u0644\u062a\u0646\u0641\u064a\u0630\u064a \u0648\u0645\u0624\u0633\u0633 \u0633\u0631\u0627\u064a\u0627 AI</strong>\u060c \u0645\u0642\u064a\u0645 \u0641\u064a \u062a\u0628\u0648\u0643\u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629.',
-      '\u064a\u0645\u062a\u062f \u0639\u0645\u0644\u064a \u0639\u0628\u0631 \u0643\u0627\u0645\u0644 \u0645\u0643\u062f\u0633 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a: \u0628\u0646\u064a\u062a <strong>Lumiq</strong>\u060c \u0645\u0646\u0635\u0629 \u062a\u0639\u0644\u064a\u0645\u064a\u0629 \u0628\u0646\u0645\u0627\u0630\u062c \u0644\u063a\u0648\u064a\u0629 \u0643\u0628\u064a\u0631\u0629 \u0645\u0639 RAG \u0648\u0644\u0648\u062d\u0627\u062a \u0645\u062a\u0639\u062f\u062f\u0629 \u0627\u0644\u0623\u062f\u0648\u0627\u0631 \u0648\u062a\u062f\u0631\u064a\u0633 \u0630\u0643\u064a\u061b \u0648<strong>MentorX</strong>\u060c \u0645\u0633\u0627\u0639\u062f \u062a\u0639\u0644\u0645 \u0634\u062e\u0635\u064a \u0628\u062e\u0637\u0637 \u062f\u0631\u0627\u0633\u064a\u0629 \u062a\u0643\u064a\u0641\u064a\u0629.',
-      '\u0637\u0648\u0631\u062a \u0623\u064a\u0636\u0627\u064b \u0623\u0646\u0638\u0645\u0629 \u0644\u0643\u0634\u0641 \u0623\u0636\u0631\u0627\u0631 \u0627\u0644\u0645\u0631\u0643\u0628\u0627\u062a\u060c \u0648\u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0645\u0634\u0627\u0639\u0631 \u0628\u0627\u0633\u062a\u062e\u062f\u0627\u0645 RoBERTa\u060c \u0648\u062a\u0634\u062e\u064a\u0635 \u0623\u0645\u0631\u0627\u0636 \u0627\u0644\u0623\u0633\u0646\u0627\u0646 \u0628\u062f\u0645\u062c YOLOv8 \u0648EfficientNetV2 \u0645\u0639 Grad-CAM.',
-      '\u0628\u0648\u0635\u0641\u064a \u0645\u0624\u0633\u0633\u0627\u064b\u060c \u0644\u0627 \u0623\u0643\u062a\u0641\u064a \u0628\u062a\u062e\u064a\u0651\u0644 \u0645\u0633\u062a\u0642\u0628\u0644 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u2014 \u0628\u0644 \u0623\u0628\u0646\u064a\u0647. \u0623\u0633\u0639\u0649 \u0628\u0645\u0647\u0645\u0629 \u0648\u0627\u0636\u062d\u0629: \u0647\u0646\u062f\u0633\u0629 \u0623\u0646\u0638\u0645\u0629 \u0630\u0643\u064a\u0629 \u062a\u062d\u0644 \u0645\u0634\u0643\u0644\u0627\u062a \u062d\u0642\u064a\u0642\u064a\u0629.'
+      'أنا <strong>العز الدميني</strong> — مهندس ذكاء اصطناعي يؤمن بأن أفضل طريقة لفهم الذكاء هي بناؤه، مع خبرة عملية حقيقية في بناء أنظمة ذكاء اصطناعي من الصفر.',
+      'صممت ونفذت تطبيقات ذكاء اصطناعي متكاملة: خطوط RAG، نماذج LLM مضبوطة، رؤية حاسوبية، وأنظمة متعددة الوكلاء. لا أكتفي بدراسة الذكاء — بل أطبقه على مشكلات حقيقية.',
+      'إن كنت تبني شيئاً طموحاً بالذكاء الاصطناعي — فلنتحدث.'
     ],
-    infoLabels:['\ud83d\udccd \u0627\u0644\u0645\u0648\u0642\u0639','\ud83c\udfe2 \u0627\u0644\u0634\u0631\u0643\u0629','\ud83d\udcbc \u0627\u0644\u0645\u0646\u0635\u0628','\ud83c\udf93 \u0627\u0644\u0634\u0647\u0627\u062f\u0629','\ud83c\udfe2 \u0627\u0644\u062c\u0627\u0645\u0639\u0629','\ud83c\udf10 \u0627\u0644\u0644\u063a\u0627\u062a','\u2705 \u0627\u0644\u062d\u0627\u0644\u0629'],
-    infoVals:['\u062a\u0628\u0648\u0643\u060c \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629','\u0633\u0631\u0627\u064a\u0627 AI','\u0631\u0626\u064a\u0633 \u062a\u0646\u0641\u064a\u0630\u064a \u0648\u0645\u0624\u0633\u0633','\u0628\u0643\u0627\u0644\u0648\u0631\u064a\u0648\u0633 \u0647\u0646\u062f\u0633\u0629 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a','\u062c\u0627\u0645\u0639\u0629 \u0628\u0647\u0634\u0647 \u0634\u0647\u064a\u0631','AR \xb7 EN \xb7 TR','<span class="status-badge"><span class="dot"></span>\u0645\u062a\u0627\u062d \u0644\u0644\u0639\u0645\u0644</span>'],
+    infoLabels:['\ud83d\udccd \u0627\u0644\u0645\u0648\u0642\u0639','\ud83d\ude80 \u0645\u0634\u0631\u0648\u0639','\ud83d\udcbc \u0627\u0644\u0645\u0646\u0635\u0628','\ud83c\udf93 \u0627\u0644\u0634\u0647\u0627\u062f\u0629','\ud83c\udfe2 \u0627\u0644\u062c\u0627\u0645\u0639\u0629','\ud83c\udf10 \u0627\u0644\u0644\u063a\u0627\u062a','\u2705 \u0627\u0644\u062d\u0627\u0644\u0629'],
+    infoVals:['\u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629','\u0633\u0631\u0627\u064a\u0627 AI','\u0645\u0647\u0646\u062f\u0633 \u0630\u0643\u0627\u0621 \u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0648\u0645\u0624\u0633\u0633','\u0628\u0643\u0627\u0644\u0648\u0631\u064a\u0648\u0633 \u0647\u0646\u062f\u0633\u0629 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a','\u062c\u0627\u0645\u0639\u0629 \u0628\u0647\u0634\u0647 \u0634\u0647\u064a\u0631','AR \xb7 EN \xb7 TR','<span class="status-badge"><span class="dot"></span>\u0645\u062a\u0627\u062d \u0644\u0644\u0639\u0645\u0644</span>'],
     typing:['\u0623\u0646\u0627 \u0644\u0627 \u0623\u062a\u062e\u064a\u0651\u0644 \u0645\u0633\u062a\u0642\u0628\u0644 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u2014 \u0628\u0644 \u0623\u0628\u0646\u064a\u0647.','\u0645\u0646 \u062e\u0637\u0648\u0637 \u0627\u0644\u0646\u0645\u0627\u0630\u062c \u0627\u0644\u0644\u063a\u0648\u064a\u0629 \u0625\u0644\u0649 \u0645\u0646\u0635\u0627\u062a \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a.','\u0623\u0647\u0646\u062f\u0633 \u0623\u0646\u0638\u0645\u0629 \u0630\u0643\u064a\u0629 \u062a\u062d\u0644 \u0645\u0634\u0643\u0644\u0627\u062a \u062d\u0642\u064a\u0642\u064a\u0629.'],
     timeline:[
       {date:'2021 - 2026', title:'\u0628\u0643\u0627\u0644\u0648\u0631\u064a\u0648\u0633 \u0647\u0646\u062f\u0633\u0629 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a', desc:'\u062c\u0627\u0645\u0639\u0629 \u0628\u0647\u0634\u0647 \u0634\u0647\u064a\u0631 - \u0625\u0633\u0637\u0646\u0628\u0648\u0644\u060c \u062a\u0631\u0643\u064a\u0627'},
@@ -963,7 +967,7 @@ function setLang(lang) {
   t.aboutPs.forEach(function(txt,i){ if(aps[i]) aps[i].innerHTML=txt; });
   var ils = document.querySelectorAll('.info-row .lbl');
   t.infoLabels.forEach(function(txt,i){ if(ils[i]) ils[i].innerHTML=txt; });
-  var ivs = document.querySelectorAll('.info-row > span:last-child');
+  var ivs = document.querySelectorAll('.info-row > span:last-child, .info-row > a');
   t.infoVals.forEach(function(txt,i){ if(ivs[i]) ivs[i].innerHTML=txt; });
   // Timeline - always update
   var tlItems = document.querySelectorAll('.tl-item');
