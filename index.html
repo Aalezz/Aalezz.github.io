@@ -33,6 +33,8 @@ nav{position:fixed;top:0;width:100%;z-index:200;background:rgba(6,10,18,0.85);ba
 .btn-primary:hover{transform:translateY(-2px);}
 .btn-outline{border:1px solid var(--border);color:var(--text);background:transparent;}
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.btn-cv{border:1px solid rgba(6,255,165,0.4);color:var(--accent3);background:rgba(6,255,165,0.07);}
+.btn-cv:hover{border-color:var(--accent3);background:rgba(6,255,165,0.15);transform:translateY(-2px);box-shadow:0 0 18px rgba(6,255,165,0.2);}
 .hero-stats{display:flex;gap:3rem;margin-top:4rem;flex-wrap:wrap;}
 .stat strong{display:block;font-size:2rem;font-weight:900;background:linear-gradient(90deg,var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .stat span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
@@ -216,10 +218,11 @@ body:not(.rtl) .proj-bullets li::before{left:0;right:auto;}
       <li><a href="#skills" data-key="nav1"></a></li>
       <li><a href="#projects" data-key="nav2"></a></li>
       <li><a href="#experience" data-key="nav3"></a></li>
-      <li><a href="#certifications" data-key="nav4"></a></li>
-      <li><a href="#testimonials" data-key="nav5"></a></li>
-      <li><a href="#blog" data-key="nav6"></a></li>
-      <li><a href="#contact" data-key="nav7"></a></li>
+      <li><a href="#education" data-key="nav4"></a></li>
+      <li><a href="#certifications" data-key="nav5"></a></li>
+      <li><a href="#testimonials" data-key="nav6"></a></li>
+      <li><a href="#blog" data-key="nav7"></a></li>
+      <li><a href="#contact" data-key="nav8"></a></li>
     </ul>
     <div class="lang-switch">
       <button class="lang-btn active-lang" id="langEN" onclick="setLang('en')">EN</button>
@@ -240,6 +243,7 @@ body:not(.rtl) .proj-bullets li::before{left:0;right:auto;}
         <div class="hero-btns">
           <a href="#projects" class="btn btn-primary" data-key="btn1"></a>
           <a href="#contact" class="btn btn-outline" data-key="btn2"></a>
+          <a href="ALEZZ_ALDUMAINI.pdf" download class="btn btn-cv" data-key="btn3"></a>
         </div>
         <div class="hero-stats">
           <div class="stat"><strong>8+</strong><span data-key="stat0"></span></div>
@@ -326,6 +330,13 @@ body:not(.rtl) .proj-bullets li::before{left:0;right:auto;}
   </div></div>
 </div>
 
+<!-- EDUCATION -->
+<div class="sec" id="education">
+  <div class="sec-label" data-key="lbl_edu"></div>
+  <h2 data-key="h2_edu"></h2>
+  <div class="timeline" id="educationEl"></div>
+</div>
+
 <!-- CERTIFICATIONS -->
 <div class="sec" id="certifications">
   <div class="sec-label" data-key="lbl_cert"></div>
@@ -333,14 +344,7 @@ body:not(.rtl) .proj-bullets li::before{left:0;right:auto;}
   <div class="skill-grid" id="certGrid"></div>
 </div>
 
-<!-- TESTIMONIALS -->
-<div class="full-bg" id="testimonials">
-  <div class="sec"><div class="sec-inner">
-    <div class="sec-label" data-key="lbl_test"></div>
-    <h2 data-key="h2_test"></h2>
-    <div class="testimonials-grid" id="testimonialsGrid"></div>
-  </div></div>
-</div>
+
 
 <!-- BLOG -->
 <div class="sec" id="blog">
@@ -358,10 +362,11 @@ body:not(.rtl) .proj-bullets li::before{left:0;right:auto;}
       <div class="contact-info">
         <p data-key="contactDesc"></p>
         <div class="c-links">
-          <a class="c-link" href="/cdn-cgi/l/email-protection#d0b1bcb5aaaafeb1bcb4a5bdb1b9beb990b7bdb1b9bcfeb3bfbd"><span class="ic">📧</span><span class="__cf_email__" data-cfemail="c2a3aea7b8b8eca3aea6b7afa3abacab82a5afa3abaeeca1adaf">[email&#160;protected]</span></a>
+          <a class="c-link" href="mailto:alezz.aldumaini@gmail.com"><span class="ic">📧</span>alezz.aldumaini@gmail.com</a>
           <a class="c-link" href="https://www.linkedin.com/in/al-ezz-al-dumaini-718395312/" target="_blank"><span class="ic">💼</span>LinkedIn</a>
           <a class="c-link" href="https://github.com/Aalezz" target="_blank"><span class="ic">🐙</span>GitHub</a>
           <a class="c-link" href="https://aalezz.github.io/suraya-ai/" target="_blank"><span class="ic">🏢</span>Suraya AI</a>
+          <a class="c-link" href="ALEZZ_ALDUMAINI.pdf" download><span class="ic">📄</span><span data-key="btn3"></span></a>
           <a class="c-link" href="#"><span class="ic">📍</span><span data-key="iv0"></span></a>
         </div>
       </div>
@@ -381,7 +386,7 @@ body:not(.rtl) .proj-bullets li::before{left:0;right:auto;}
   <div class="footer-inner">
     <div class="footer-logo">Alezz Aldumaini</div>
     <div class="footer-socials">
-      <a class="footer-social" href="/cdn-cgi/l/email-protection#0e6f626b7474206f626a7b636f6760674e69636f6762206d6163">📧</a>
+      <a class="footer-social" href="mailto:alezz.aldumaini@gmail.com">📧</a>
       <a class="footer-social" href="https://www.linkedin.com/in/al-ezz-al-dumaini-718395312/" target="_blank">💼</a>
       <a class="footer-social" href="https://github.com/Aalezz" target="_blank">🐙</a>
     </div>
@@ -392,10 +397,8 @@ body:not(.rtl) .proj-bullets li::before{left:0;right:auto;}
 </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 var currentLang='en';
-
-// ─── CANVAS ───────────────────────────────────────────────────────────────
 var canvas=document.getElementById('canvas'),ctx=canvas.getContext('2d'),W,H,pts=[];
 function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
 resize();window.addEventListener('resize',resize);
@@ -407,151 +410,49 @@ for(var i=0;i<130;i++)pts.push(new Pt());
 function loop(){ctx.clearRect(0,0,W,H);pts.forEach(function(p){p.step();p.draw();});for(var i=0;i<pts.length;i++)for(var j=i+1;j<pts.length;j++){var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle='rgba(0,212,255,'+(0.12*(1-d/110))+')';ctx.lineWidth=.5;ctx.stroke();}}requestAnimationFrame(loop);}
 loop();
 
-// ─── TYPED ────────────────────────────────────────────────────────────────
 var phrases=[],pi=0,ci=0,deleting=false,typedEl=document.getElementById('typedText'),typingTimer;
-function runTyping(){
-  clearTimeout(typingTimer);
-  if(!phrases.length)return;
-  var cur=phrases[pi%phrases.length];
-  if(!deleting){typedEl.textContent=cur.slice(0,++ci);if(ci===cur.length){deleting=true;typingTimer=setTimeout(runTyping,2200);return;}}
-  else{typedEl.textContent=cur.slice(0,--ci);if(ci===0){deleting=false;pi=(pi+1)%phrases.length;}}
-  typingTimer=setTimeout(runTyping,deleting?35:55);
-}
+function runTyping(){clearTimeout(typingTimer);if(!phrases.length)return;var cur=phrases[pi%phrases.length];if(!deleting){typedEl.textContent=cur.slice(0,++ci);if(ci===cur.length){deleting=true;typingTimer=setTimeout(runTyping,2200);return;}}else{typedEl.textContent=cur.slice(0,--ci);if(ci===0){deleting=false;pi=(pi+1)%phrases.length;}}typingTimer=setTimeout(runTyping,deleting?35:55);}
 
-// ─── FILTER ───────────────────────────────────────────────────────────────
-document.addEventListener('click',function(e){
-  if(e.target.classList.contains('filter-btn')){
-    document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
-    e.target.classList.add('active');
-    var f=e.target.dataset.filter;
-    document.querySelectorAll('.proj-card').forEach(function(c){c.style.display=(f==='all'||c.dataset.cat.split(' ').includes(f))?'':'none';});
-  }
-});
+document.addEventListener('click',function(e){if(e.target.classList.contains('filter-btn')){document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});e.target.classList.add('active');var f=e.target.dataset.filter;document.querySelectorAll('.proj-card').forEach(function(c){c.style.display=(f==='all'||c.dataset.cat.split(' ').includes(f))?'':'none';});}});
 
-// ─── MODALS ───────────────────────────────────────────────────────────────
 function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
-function openModal(id,html){
-  document.getElementById(id==='cs'?'csContent':'blogContent').innerHTML=html;
-  var el=document.getElementById(id==='cs'?'csModal':'blogModal');
-  el.classList.add('open');el.scrollTop=0;document.body.style.overflow='hidden';
-}
+function openModal(id,html){document.getElementById(id==='cs'?'csContent':'blogContent').innerHTML=html;var el=document.getElementById(id==='cs'?'csModal':'blogModal');el.classList.add('open');el.scrollTop=0;document.body.style.overflow='hidden';}
 document.querySelectorAll('.modal-overlay').forEach(function(el){el.addEventListener('click',function(e){if(e.target===this)closeModal(this.id);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal('csModal');closeModal('blogModal');}});
 
-// ─── CASE STUDIES ─────────────────────────────────────────────────────────
 var CS={
-  suraya:{en:{title:'🎙️ Case Study: Suraya Voice Agent',sections:[
-    {label:'The Problem',content:"Businesses serving Arabic-speaking markets lacked an affordable voice AI solution with proper dialect recognition and sub-2s latency."},
-    {label:'Alternatives Considered',list:['Third-party platform — rejected: Arabic dialect limitations','Custom ASR from scratch — rejected: timeline and cost','Chosen: faster-whisper + Claude API + ElevenLabs pipeline']},
-    {label:'What Was Built',content:'End-to-end voice agent: Picovoice wake word → faster-whisper STT → Claude reasoning → ElevenLabs emotional TTS. Persistent memory via JSON. All real-time on standard hardware.'},
-    {label:'Key Outcomes',outcomes:[{value:'<2s',label:'Response Latency'},{value:'300+',label:'Concurrent Sessions'},{value:'1',label:'Startup Founded'}]},
-    {label:'What I Learned',content:'Wake word sensitivity tuning and threading architecture are the hardest problems. Non-blocking queues between pipeline stages are essential.'}
-  ]},ar:{title:'🎙️ دراسة حالة: وكيل صوت سرايا',sections:[
-    {label:'المشكلة',content:'كانت الشركات في الأسواق الناطقة بالعربية تفتقر إلى حل ذكاء اصطناعي صوتي بأسعار معقولة مع التعرف الصحيح على اللهجات وزمن استجابة أقل من ثانيتين.'},
-    {label:'البدائل المدروسة',list:['منصة طرف ثالث — مرفوضة: قيود اللهجة العربية','بناء نظام ASR من الصفر — مرفوض: التكلفة والوقت','الاختيار: faster-whisper + Claude API + ElevenLabs']},
-    {label:'ما تم بناؤه',content:'وكيل صوتي متكامل: اكتشاف كلمة التنبيه → تحويل الكلام إلى نص → تحليل Claude → تحويل النص إلى كلام عاطفي عبر ElevenLabs. ذاكرة دائمة عبر JSON.'},
-    {label:'النتائج الرئيسية',outcomes:[{value:'<2s',label:'زمن الاستجابة'},{value:'300+',label:'جلسة متزامنة'},{value:'1',label:'شركة ناشئة'}]},
-    {label:'ما تعلمته',content:'ضبط حساسية كلمة التنبيه ومعمارية الخيوط هما أصعب المشاكل. قوائم الانتظار غير المحجوبة بين مراحل الأنبوب ضرورية.'}
-  ]}},
-  research:{en:{title:'🤖 Case Study: Suraya Research Team',sections:[
-    {label:'The Problem',content:'A single LLM produces flat, unvalidated output. Researchers needed a system that gathers, validates, and synthesizes across multiple sources.'},
-    {label:'Alternatives',list:['Single LLM — hallucinations without cross-checking','Sequential pipeline — too slow','Chosen: 3-agent pipeline with live SSE streaming']},
-    {label:'What Was Built',content:'Scout researches → Analyst critiques → Writer produces final report. All streamed live via Server-Sent Events.'},
-    {label:'Key Outcomes',outcomes:[{value:'3',label:'Specialized Agents'},{value:'Live',label:'SSE Streaming'},{value:'~60s',label:'Full Report'}]},
-    {label:'What I Learned',content:'Explicit role boundaries are critical. Without them, agents drift and produce redundant output.'}
-  ]},ar:{title:'🤖 دراسة حالة: فريق بحث سرايا',sections:[
-    {label:'المشكلة',content:'نموذج لغوي واحد ينتج مخرجات غير موثقة. يحتاج الباحثون إلى نظام يجمع المعلومات ويتحقق منها ويوحدها.'},
-    {label:'البدائل',list:['نموذج واحد — هلوسات بدون تدقيق متقاطع','أنبوب تسلسلي — بطيء جداً','الاختيار: 3 وكلاء متخصصون مع بث SSE المباشر']},
-    {label:'ما تم بناؤه',content:'الكشاف يبحث → المحلل ينتقد → الكاتب ينتج التقرير النهائي. كل شيء يُبث مباشرة عبر Server-Sent Events.'},
-    {label:'النتائج الرئيسية',outcomes:[{value:'3',label:'وكلاء متخصصون'},{value:'مباشر',label:'بث SSE'},{value:'~60 ث',label:'تقرير كامل'}]},
-    {label:'ما تعلمته',content:'حدود الأدوار الصريحة ضرورية. بدونها ينجرف الوكلاء وينتجون مخرجات متكررة.'}
-  ]}},
-  mentorx:{en:{title:'🎓 Case Study: MentorX',sections:[
-    {label:'The Problem',content:"Students don't learn the same way. Static courses don't adapt to individual gaps."},
-    {label:'Alternatives',list:['Static quiz bank — no adaptation','Pure RAG chatbot — reactive only','Chosen: Adaptive LLM pipeline analyzing performance history']},
-    {label:'What Was Built',content:'Upload materials → AI summarizes multimodally → generates calibrated quizzes → adapts difficulty and creates custom study plans.'},
-    {label:'Key Outcomes',outcomes:[{value:'4+',label:'Content Types'},{value:'Adaptive',label:'Quiz Engine'},{value:'100%',label:'Custom Plans'}]},
-    {label:'What I Learned',content:'Audio transcription quality determines everything downstream. Multimodal ingestion was the hardest engineering challenge.'}
-  ]},ar:{title:'🎓 دراسة حالة: MentorX',sections:[
-    {label:'المشكلة',content:'الطلاب لا يتعلمون بنفس الطريقة. المناهج الثابتة لا تتكيف مع الفجوات الفردية.'},
-    {label:'البدائل',list:['بنك أسئلة ثابت — لا تكيف','روبوت RAG بحت — تفاعلي فقط','الاختيار: أنبوب LLM تكيفي يحلل تاريخ الأداء']},
-    {label:'ما تم بناؤه',content:'رفع المواد → الذكاء الاصطناعي يلخص متعدد الوسائط → يولد اختبارات معايرة → يكيف الصعوبة وينشئ خطط دراسة مخصصة.'},
-    {label:'النتائج الرئيسية',outcomes:[{value:'4+',label:'أنواع المحتوى'},{value:'تكيفي',label:'محرك الاختبارات'},{value:'100%',label:'خطط مخصصة'}]},
-    {label:'ما تعلمته',content:'جودة نسخ الصوت تحدد كل شيء في المراحل اللاحقة. الاستيعاب متعدد الوسائط كان أصعب تحدي هندسي.'}
-  ]}}
+  suraya:{en:{title:'🎙️ Case Study: Suraya Voice Agent',sections:[{label:'The Problem',content:"Businesses serving Arabic-speaking markets lacked an affordable voice AI solution with proper dialect recognition and sub-2s latency."},{label:'Alternatives Considered',list:['Third-party platform — rejected: Arabic dialect limitations','Custom ASR from scratch — rejected: timeline and cost','Chosen: faster-whisper + Claude API + ElevenLabs pipeline']},{label:'What Was Built',content:'End-to-end voice agent: Picovoice wake word → faster-whisper STT → Claude reasoning → ElevenLabs emotional TTS. Persistent memory via JSON. All real-time on standard hardware.'},{label:'Key Outcomes',outcomes:[{value:'<2s',label:'Response Latency'},{value:'300+',label:'Concurrent Sessions'},{value:'1',label:'Startup Founded'}]},{label:'What I Learned',content:'Wake word sensitivity tuning and threading architecture are the hardest problems. Non-blocking queues between pipeline stages are essential.'}]},ar:{title:'🎙️ دراسة حالة: وكيل صوت سرايا',sections:[{label:'المشكلة',content:'كانت الشركات في الأسواق الناطقة بالعربية تفتقر إلى حل ذكاء اصطناعي صوتي بأسعار معقولة مع التعرف الصحيح على اللهجات وزمن استجابة أقل من ثانيتين.'},{label:'البدائل المدروسة',list:['منصة طرف ثالث — مرفوضة: قيود اللهجة العربية','بناء نظام ASR من الصفر — مرفوض: التكلفة والوقت','الاختيار: faster-whisper + Claude API + ElevenLabs']},{label:'ما تم بناؤه',content:'وكيل صوتي متكامل: اكتشاف كلمة التنبيه → تحويل الكلام إلى نص → تحليل Claude → تحويل النص إلى كلام عاطفي عبر ElevenLabs. ذاكرة دائمة عبر JSON.'},{label:'النتائج الرئيسية',outcomes:[{value:'<2s',label:'زمن الاستجابة'},{value:'300+',label:'جلسة متزامنة'},{value:'1',label:'شركة ناشئة'}]},{label:'ما تعلمته',content:'ضبط حساسية كلمة التنبيه ومعمارية الخيوط هما أصعب المشاكل. قوائم الانتظار غير المحجوبة بين مراحل الأنبوب ضرورية.'}]}},
+  research:{en:{title:'🤖 Case Study: Suraya Research Team',sections:[{label:'The Problem',content:'A single LLM produces flat, unvalidated output. Researchers needed a system that gathers, validates, and synthesizes across multiple sources.'},{label:'Alternatives',list:['Single LLM — hallucinations without cross-checking','Sequential pipeline — too slow','Chosen: 3-agent pipeline with live SSE streaming']},{label:'What Was Built',content:'Scout researches → Analyst critiques → Writer produces final report. All streamed live via Server-Sent Events.'},{label:'Key Outcomes',outcomes:[{value:'3',label:'Specialized Agents'},{value:'Live',label:'SSE Streaming'},{value:'~60s',label:'Full Report'}]},{label:'What I Learned',content:'Explicit role boundaries are critical. Without them, agents drift and produce redundant output.'}]},ar:{title:'🤖 دراسة حالة: فريق بحث سرايا',sections:[{label:'المشكلة',content:'نموذج لغوي واحد ينتج مخرجات غير موثقة. يحتاج الباحثون إلى نظام يجمع المعلومات ويتحقق منها ويوحدها.'},{label:'البدائل',list:['نموذج واحد — هلوسات بدون تدقيق متقاطع','أنبوب تسلسلي — بطيء جداً','الاختيار: 3 وكلاء متخصصون مع بث SSE المباشر']},{label:'ما تم بناؤه',content:'الكشاف يبحث → المحلل ينتقد → الكاتب ينتج التقرير النهائي. كل شيء يُبث مباشرة عبر Server-Sent Events.'},{label:'النتائج الرئيسية',outcomes:[{value:'3',label:'وكلاء متخصصون'},{value:'مباشر',label:'بث SSE'},{value:'~60 ث',label:'تقرير كامل'}]},{label:'ما تعلمته',content:'حدود الأدوار الصريحة ضرورية. بدونها ينجرف الوكلاء وينتجون مخرجات متكررة.'}]}},
+  mentorx:{en:{title:'🎓 Case Study: MentorX',sections:[{label:'The Problem',content:"Students don't learn the same way. Static courses don't adapt to individual gaps."},{label:'Alternatives',list:['Static quiz bank — no adaptation','Pure RAG chatbot — reactive only','Chosen: Adaptive LLM pipeline analyzing performance history']},{label:'What Was Built',content:'Upload materials → AI summarizes multimodally → generates calibrated quizzes → adapts difficulty and creates custom study plans.'},{label:'Key Outcomes',outcomes:[{value:'4+',label:'Content Types'},{value:'Adaptive',label:'Quiz Engine'},{value:'100%',label:'Custom Plans'}]},{label:'What I Learned',content:'Audio transcription quality determines everything downstream. Multimodal ingestion was the hardest engineering challenge.'}]},ar:{title:'🎓 دراسة حالة: MentorX',sections:[{label:'المشكلة',content:'الطلاب لا يتعلمون بنفس الطريقة. المناهج الثابتة لا تتكيف مع الفجوات الفردية.'},{label:'البدائل',list:['بنك أسئلة ثابت — لا تكيف','روبوت RAG بحت — تفاعلي فقط','الاختيار: أنبوب LLM تكيفي يحلل تاريخ الأداء']},{label:'ما تم بناؤه',content:'رفع المواد → الذكاء الاصطناعي يلخص متعدد الوسائط → يولد اختبارات معايرة → يكيف الصعوبة وينشئ خطط دراسة مخصصة.'},{label:'النتائج الرئيسية',outcomes:[{value:'4+',label:'أنواع المحتوى'},{value:'تكيفي',label:'محرك الاختبارات'},{value:'100%',label:'خطط مخصصة'}]},{label:'ما تعلمته',content:'جودة نسخ الصوت تحدد كل شيء في المراحل اللاحقة. الاستيعاب متعدد الوسائط كان أصعب تحدي هندسي.'}]}}
 };
 
-function openCS(id){
-  var lang=currentLang,cs=CS[id][lang];
-  var html='<h2 style="font-size:1.4rem;font-weight:800;margin-bottom:1.8rem;">'+cs.title+'</h2>';
-  cs.sections.forEach(function(s){
-    html+='<div class="cs-section"><h4>'+s.label+'</h4>';
-    if(s.content)html+='<p>'+s.content+'</p>';
-    if(s.list){html+='<ul>';s.list.forEach(function(li){html+='<li>'+li+'</li>';});html+='</ul>';}
-    if(s.outcomes){html+='<div class="cs-outcome">';s.outcomes.forEach(function(o){html+='<div class="cs-outcome-item"><strong>'+o.value+'</strong><span>'+o.label+'</span></div>';});html+='</div>';}
-    html+='</div>';
-  });
-  openModal('cs',html);
-}
+function openCS(id){var lang=currentLang,cs=CS[id][lang];var html='<h2 style="font-size:1.4rem;font-weight:800;margin-bottom:1.8rem;">'+cs.title+'</h2>';cs.sections.forEach(function(s){html+='<div class="cs-section"><h4>'+s.label+'</h4>';if(s.content)html+='<p>'+s.content+'</p>';if(s.list){html+='<ul>';s.list.forEach(function(li){html+='<li>'+li+'</li>';});html+='</ul>';}if(s.outcomes){html+='<div class="cs-outcome">';s.outcomes.forEach(function(o){html+='<div class="cs-outcome-item"><strong>'+o.value+'</strong><span>'+o.label+'</span></div>';});html+='</div>';}html+='</div>';});openModal('cs',html);}
 
-// ─── BLOG POSTS ───────────────────────────────────────────────────────────
 var BLOG={
-  voice:{
-    en:{tag:'Voice AI · Engineering',title:'How I Built a Real-Time Arabic Voice Agent with Whisper + Claude',date:'March 2026 · 8 min read',body:'<p class="lead">When I started building Suraya, I had one hard constraint: respond in under 2 seconds — in Arabic. That ruled out most off-the-shelf solutions immediately.</p><h3>Why existing tools failed</h3><p>Most voice AI platforms treat Arabic as an afterthought. They support Modern Standard Arabic reasonably well, but real users speak in dialect — Gulf, Levantine, Egyptian. Accuracy dropped below 60% on real conversational speech. Unusable.</p><h3>Component 1: Wake Word — Picovoice Porcupine</h3><p>Porcupine runs entirely on-device. I trained a custom wake word for "Hey Suraya" in English and Arabic pronunciation. Sensitivity tuning was the hardest part — I settled on 0.6 after testing with 12 people in noisy environments.</p><h3>Component 2: STT — faster-whisper</h3><p>Whisper large-v3 is state-of-the-art for Arabic, but naive CPU inference takes 3-4 seconds. faster-whisper with int8 quantization dropped this to under 600ms. Pre-warming the model on startup saved another 1.2 seconds of perceived latency.</p><h3>Component 3: Reasoning — Claude API</h3><p>Transcribed text goes to Claude with a system prompt that enforces an 80-word max per response and forbids markdown formatting — asterisks get read aloud verbatim by TTS.</p><h3>Component 4: TTS — ElevenLabs with emotion detection</h3><p>I run a lightweight emotion classifier before ElevenLabs. Based on the label (excited, sad, reassuring), I adjust stability parameters to change voice expressiveness.</p><h3>Threading architecture</h3><p>All four components run on separate threads with non-blocking queues between stages. This is what makes sub-2s latency achievable — no component waits for the others.</p><h3>What I\'d do differently</h3><p>Implement streaming TTS from the start — starting playback while the sentence is still being generated shaves 400-600ms. Silence detection also needs more engineering than I expected.</p>'},
-    ar:{tag:'الذكاء الاصطناعي الصوتي · هندسة',title:'كيف بنيت وكيل صوتي عربي بزمن استجابة فوري باستخدام Whisper + Claude',date:'مارس 2026 · 8 دقائق قراءة',body:'<p class="lead">عندما بدأت في بناء سرايا، كان لدي قيد صارم واحد: الاستجابة في أقل من ثانيتين — بالعربية. هذا استبعد معظم الحلول الجاهزة فوراً.</p><h3>لماذا فشلت الأدوات الموجودة</h3><p>معظم منصات الذكاء الاصطناعي الصوتي تتعامل مع العربية كأمر ثانوي. تدعم العربية الفصحى بشكل معقول، لكن المستخدمين الحقيقيين يتحدثون باللهجات — الخليجية، الشامية، المصرية. انخفضت الدقة إلى أقل من 60% على الكلام الحواري الحقيقي. غير صالح للاستخدام.</p><h3>المكون الأول: كلمة التنبيه — Picovoice Porcupine</h3><p>يعمل Porcupine محلياً تماماً على الجهاز. دربت نموذج كلمة تنبيه مخصص لـ"هي سرايا" بالنطق الإنجليزي والعربي. كان ضبط الحساسية الجزء الأصعب — استقريت على 0.6 بعد الاختبار مع 12 شخصاً في بيئات صاخبة.</p><h3>المكون الثاني: تحويل الكلام — faster-whisper</h3><p>Whisper large-v3 هو الأفضل للعربية، لكن الاستدلال الساذج يستغرق 3-4 ثوانٍ. faster-whisper مع تكميم int8 خفض هذا إلى أقل من 600 ميلي ثانية. التحميل المسبق للنموذج وفّر 1.2 ثانية أخرى من زمن الاستجابة المُدرك.</p><h3>المكون الثالث: التفكير — Claude API</h3><p>يذهب النص المنسوخ إلى Claude مع موجه نظام يفرض حداً أقصى من 80 كلمة لكل استجابة ويمنع تنسيق markdown.</p><h3>المكون الرابع: تحويل النص للكلام — ElevenLabs مع كشف العاطفة</h3><p>أشغّل مصنف عاطفة خفيف الوزن قبل ElevenLabs. بناءً على التسمية (متحمس، حزين، مطمئن)، أضبط معاملات الاستقرار لتغيير تعبيرية الصوت.</p><h3>معمارية الخيوط</h3><p>تعمل جميع المكونات الأربعة على خيوط منفصلة مع قوائع انتظار غير محجوبة بين المراحل. هذا هو ما يجعل زمن الاستجابة أقل من ثانيتين ممكناً.</p><h3>ما كنت سأفعله بشكل مختلف</h3><p>تطبيق بث TTS من البداية — بدء تشغيل الصوت أثناء إنشاء الجملة لا يزال يوفر 400-600 ميلي ثانية. كشف الصمت يحتاج أيضاً إلى هندسة أكثر مما توقعت.'}
-  },
-  agents:{
-    en:{tag:'Architecture · LLMs',title:'AI Agents vs. RAG Pipelines: When to Use Which',date:'February 2026 · 6 min read',body:'<p class="lead">I\'ve built both — RAG in Lumiq and MentorX, agents in Suraya Research Team. The most common question: "which one should I use?" They solve different problems.</p><h3>What RAG actually is</h3><p>RAG embeds documents, stores them in a vector database, and at query time retrieves relevant chunks for the LLM to generate from. It\'s not a reasoning system. It can\'t decide what to look for, verify outputs, or take actions. When it fails, it\'s because the question requires multi-step reasoning across sources.</p><h3>What agents actually are</h3><p>An agent is an LLM in a loop with tools. It receives a goal, picks a tool, uses it, observes the result, and decides what to do next. The power is the loop — each iteration can correct course. In Suraya Research Team, Scout searches, Analyst critiques, Scout searches again to fill gaps. This produces dramatically better output than single-pass RAG.</p><h3>Use RAG when...</h3><p>✅ Fixed, known document corpus &nbsp;✅ Questions have factual answers in documents &nbsp;✅ Latency matters &nbsp;✅ Cost matters &nbsp;✅ Users ask questions, not assign tasks</p><h3>Use agents when...</h3><p>✅ Task requires multiple steps &nbsp;✅ System must decide what to gather &nbsp;✅ Output needs verification &nbsp;✅ Task involves external actions &nbsp;✅ Users assign goals, not questions</p><h3>The hybrid approach</h3><p>In MentorX, I use both. RAG handles direct retrieval questions. The agent layer handles multi-step tasks. The key insight: RAG is a tool that agents can use. Most sophisticated systems end up being agents with a RAG tool.</p>'},
-    ar:{tag:'المعمارية · نماذج اللغة',title:'وكلاء الذكاء الاصطناعي مقابل خطوط RAG: متى تستخدم أيهما',date:'فبراير 2026 · 6 دقائق قراءة',body:'<p class="lead">بنيت كليهما — RAG في Lumiq وMentorX، والوكلاء في فريق بحث سرايا. السؤال الأكثر شيوعاً: "أيهما يجب أن أستخدم؟" إنهما يحلان مشاكل مختلفة.</p><h3>ما هو RAG فعلاً</h3><p>يضمّن RAG المستندات، يخزنها في قاعدة بيانات متجهة، وعند وقت الاستعلام يسترجع الأجزاء ذات الصلة للنموذج اللغوي. إنه ليس نظام استدلال. لا يمكنه تحديد ما يبحث عنه أو التحقق من المخرجات أو اتخاذ إجراءات.</p><h3>ما هي الوكلاء فعلاً</h3><p>الوكيل هو نموذج لغوي في حلقة مع أدوات. يستقبل هدفاً، يختار أداة، يستخدمها، يلاحظ النتيجة، ويقرر الخطوة التالية. القوة في الحلقة — كل تكرار يمكنه تصحيح المسار.</p><h3>استخدم RAG عندما...</h3><p>✅ مجموعة مستندات ثابتة ومعروفة &nbsp;✅ الأسئلة لها إجابات واقعية في المستندات &nbsp;✅ زمن الاستجابة مهم &nbsp;✅ التكلفة مهمة &nbsp;✅ المستخدمون يطرحون أسئلة، لا يعيّنون مهام</p><h3>استخدم الوكلاء عندما...</h3><p>✅ المهمة تتطلب خطوات متعددة &nbsp;✅ النظام يجب أن يقرر ما يجمعه &nbsp;✅ المخرجات تحتاج تحققاً &nbsp;✅ المهمة تتضمن إجراءات خارجية &nbsp;✅ المستخدمون يعيّنون أهدافاً</p><h3>النهج الهجين</h3><p>في MentorX أستخدم كليهما. RAG للاسترجاع المباشر، والوكلاء للمهام متعددة الخطوات. الفكرة الأساسية: RAG هو أداة يمكن للوكلاء استخدامها.'}
-  },
-  llmprod:{
-    en:{tag:'MLOps · Production',title:'What I Learned Deploying LLMs to Production',date:'January 2026 · 10 min read',body:'<p class="lead">Notebooks lie. Everything works in a notebook. Production is where assumptions get stress-tested.</p><h3>1. Streaming is not optional</h3><p>Waiting 8 seconds for a response to appear all at once feels broken. Streaming makes a 6-second response feel fast. Every LLM API supports streaming. Use it from day one. In FastAPI this means StreamingResponse with SSE. 20 lines of code, transforms the feel of your app.</p><h3>2. Prompt versioning is real engineering</h3><p>Your system prompt is code. Version control it. I store prompts as named files in /prompts, committed with git. For critical prompts I maintain an eval set — 20-30 input/output pairs — and run it before deploying any change.</p><h3>3. Token costs will surprise you</h3><p>In Lumiq I injected full conversation history into every API call. With 40-50 message conversations, I was spending 15,000 tokens per call — 10x my budget. Fix: sliding window context, conversation summarization, topic-aware retrieval. Cut token usage 70% with negligible quality loss.</p><h3>4. Error handling is where systems live or die</h3><p>LLM APIs are not 100% reliable. Build in: retry with exponential backoff, fallback to simpler model, graceful error messages. Also validate LLM outputs — if you ask for JSON and get malformed JSON, catch it and retry.</p><h3>5. Log everything</h3><p>Log every API call: prompt, response, latency, token count, session ID. Also log user feedback — even thumbs up/down gives you a dataset to analyze which prompts produce bad output.</p><h3>6. Caching is your best friend</h3><p>In MentorX, semantic caching cut API costs 35% and reduced average response time 60% for popular questions. Embed the query, check similarity against cache, return cached response if threshold exceeded.</p>'},
-    ar:{tag:'MLOps · الإنتاج',title:'ما تعلمته من نشر نماذج اللغة الكبيرة في الإنتاج',date:'يناير 2026 · 10 دقائق قراءة',body:'<p class="lead">دفاتر ملاحظات Jupyter تكذب. كل شيء يعمل في دفتر الملاحظات. الإنتاج هو المكان الذي تُختبر فيه افتراضاتك.</p><h3>١. البث ليس اختيارياً</h3><p>الانتظار 8 ثوانٍ لظهور استجابة دفعة واحدة يبدو معطوباً. البث يجعل الاستجابة التي تستغرق 6 ثوانٍ تبدو سريعة. كل واجهة برمجية للنماذج اللغوية تدعم البث. استخدمه من اليوم الأول.</p><h3>٢. إصدار الموجهات هندسة حقيقية</h3><p>موجه النظام الخاص بك هو كود. تحكم في إصداراته. أخزّن الموجهات كملفات مسماة في /prompts، ملتزماً بها مع git. للموجهات الحرجة أحتفظ بمجموعة تقييم — 20-30 زوج إدخال/إخراج.</p><h3>٣. تكاليف الرموز ستفاجئك</h3><p>في Lumiq أدخلت تاريخ المحادثة الكامل في كل استدعاء API. مع محادثات من 40-50 رسالة، كنت أنفق 15,000 رمز لكل استدعاء — 10 أضعاف ميزانيتي. الحل: نافذة سياق منزلقة، تلخيص المحادثة، استرجاع واعٍ بالموضوع.</p><h3>٤. معالجة الأخطاء هي ما يحدد البقاء</h3><p>واجهات برمجة النماذج اللغوية ليست موثوقة 100٪. ابنِ فيها: إعادة المحاولة مع تراجع أسي، احتياطي لنموذج أبسط، رسائل خطأ مناسبة.</p><h3>٥. سجّل كل شيء</h3><p>سجّل كل استدعاء API: الموجه، الاستجابة، زمن الاستجابة، عدد الرموز، معرف الجلسة. سجّل أيضاً تعليقات المستخدمين.</p><h3>٦. التخزين المؤقت هو أفضل صديق لك</h3><p>في MentorX، قلّل التخزين المؤقت الدلالي تكاليف API بنسبة 35٪ وخفض متوسط وقت الاستجابة بنسبة 60٪ للأسئلة الشائعة.'}
-  },
-  multiagent:{
-    en:{tag:'Multi-Agent · Design',title:'Designing Multi-Agent Systems That Actually Work',date:'December 2025 · 7 min read',body:'<p class="lead">Multi-agent systems are seductive. Specialized agents collaborating to produce output beyond any single agent — compelling. Also where most teams get burned.</p><h3>Why single-agent systems fail</h3><p>Ask a single LLM to research and write a report. It produces something authoritative-sounding with hallucinations and no mechanism for catching its own errors. The breakthrough: what if one agent\'s job was specifically to critique another? Now errors get caught before reaching the user.</p><h3>Role design: the most important decision</h3><p><strong>Scout:</strong> gathers raw facts, does not analyze or conclude. <strong>Analyst:</strong> critiques Scout\'s output, identifies gaps — does not generate new content. <strong>Writer:</strong> synthesizes validated material — does not add new facts. Without explicit boundaries, agents drift and overlap.</p><h3>Structured handoffs</h3><p>Agents communicate through structured messages with explicit sections. Scout\'s output always has: FINDINGS (bullets with sources), CONFIDENCE (per finding), GAPS (follow-up questions). This structure matters — the next agent parses the previous one programmatically.</p><h3>Streaming: making it feel alive</h3><p>The biggest UX win was streaming agent thoughts in real-time. Users watch Scout gathering facts, Analyst critiquing, Writer synthesizing. The transparent process builds trust that a loading spinner never could.</p><h3>Failure modes</h3><p>⚠️ Infinite loops: set a hard iteration limit. ⚠️ Role collapse: enforce boundaries explicitly. ⚠️ Echo chambers: give Analyst a contrarian persona. ⚠️ Token explosion: set per-agent context limits.</p>'},
-    ar:{tag:'متعدد الوكلاء · تصميم',title:'تصميم أنظمة متعددة الوكلاء تعمل فعلاً',date:'ديسمبر 2025 · 7 دقائق قراءة',body:'<p class="lead">الأنظمة متعددة الوكلاء مغرية. وكلاء متخصصون يتعاونون لإنتاج مخرجات تتجاوز ما يستطيعه أي وكيل منفرد — فكرة مقنعة. وأيضاً حيث تحترق معظم الفرق.</p><h3>لماذا تفشل أنظمة الوكيل الواحد</h3><p>اطلب من نموذج لغوي واحد البحث وكتابة تقرير. سينتج شيئاً يبدو موثوقاً مليئاً بالهلوسات وبدون آلية للتحقق من أخطائه الخاصة. الاختراق: ماذا لو كانت مهمة وكيل واحد تحديداً انتقاد مخرجات وكيل آخر؟</p><h3>تصميم الأدوار: القرار الأهم</h3><p><strong>الكشاف:</strong> يجمع الحقائق الخام، لا يحلل أو يستنتج. <strong>المحلل:</strong> ينتقد مخرجات الكشاف، يحدد الثغرات — لا ينتج محتوى جديداً. <strong>الكاتب:</strong> يوحد المواد المتحقق منها — لا يضيف حقائق جديدة.</p><h3>التسليمات المنظمة</h3><p>يتواصل الوكلاء عبر رسائل منظمة بأقسام صريحة. مخرجات الكشاف دائماً تحتوي على: النتائج (نقاط مع مصادر)، الثقة (لكل نتيجة)، الثغرات (أسئلة للمتابعة).</p><h3>البث: جعله يبدو حياً</h3><p>أكبر فوز في تجربة المستخدم كان بث أفكار الوكلاء في الوقت الفعلي. المستخدمون يشاهدون الكشاف يجمع الحقائق، والمحلل ينتقد، والكاتب يوحد. العملية الشفافة تبني ثقة لا يستطيع دوار التحميل تحقيقها أبداً.</p><h3>أوضاع الفشل</h3><p>⚠️ الحلقات اللانهائية: ضع حداً صارماً للتكرار. ⚠️ انهيار الأدوار: فرّض الحدود صراحةً. ⚠️ غرف الصدى: أعط المحلل شخصية معارضة. ⚠️ انفجار الرموز: ضع حدوداً للسياق لكل وكيل.'}
-  },
-  journey:{
-    en:{tag:'Career · AI',title:'From AI Student to AI Founder: My Journey',date:'November 2025 · 5 min read',body:'<p class="lead">I didn\'t plan to found an AI company. I planned to graduate, get a good job, and work on interesting problems. But somewhere between my first neural network and my third shipped product, the plan changed.</p><h3>The beginning: things that didn\'t work</h3><p>My first serious AI project was Arabic restaurant review sentiment analysis. I achieved 71% accuracy and thought I\'d done something impressive. I hadn\'t — 71% on binary classification barely beats always predicting the majority class. I learned more from that failure than from any course.</p><h3>The turning point: shipping real products</h3><p>Lumiq changed my relationship with AI. First project where I had to think about users, not accuracy metrics. Real students, real frustration when answers were wrong. I rebuilt the RAG pipeline three times — each rebuild driven by observing real user failures.</p><h3>Why I started Suraya AI</h3><p>After building Suraya Voice Agent, people started asking: "Can this work for customer service?" The Arabic-speaking market is enormous and dramatically underserved. Most AI companies treat Arabic as a localization afterthought. I saw a real gap. Suraya AI is my attempt to close it.</p><h3>What I wish I\'d known earlier</h3><p>📌 Ship early — 10 real users beats 100 hours of self-evaluation. 📌 Read papers but build products — theory without application creates engineers who can explain but can\'t build. 📌 The hardest problems aren\'t the AI — they\'re the pipelines, latency, cost, and edge cases. 📌 Build in public — it attracts collaborators and opportunities.</p>'},
-    ar:{tag:'المسيرة المهنية · الذكاء الاصطناعي',title:'من طالب ذكاء اصطناعي إلى مؤسس شركة: رحلتي',date:'نوفمبر 2025 · 5 دقائق قراءة',body:'<p class="lead">لم أكن أخطط لتأسيس شركة ذكاء اصطناعي. كنت أخطط للتخرج، الحصول على وظيفة جيدة، والعمل على مشاكل مثيرة للاهتمام. لكن في مكان ما بين شبكتي العصبية الأولى ومنتجي الثالث المُشحون، تغيرت الخطة.</p><h3>البداية: أشياء لم تنجح</h3><p>مشروعي الذكاء الاصطناعي الجدي الأول كان تحليل مشاعر مراجعات المطاعم العربية. حققت دقة 71٪ واعتقدت أنني فعلت شيئاً رائعاً. لم أكن كذلك — 71٪ في التصنيف الثنائي بالكاد يتجاوز التنبؤ دائماً بالفئة الأكثر شيوعاً. تعلمت من ذلك الفشل أكثر من أي دورة.</p><h3>نقطة التحول: شحن منتجات حقيقية</h3><p>غيّر Lumiq علاقتي بالذكاء الاصطناعي. أول مشروع يجب فيه التفكير في المستخدمين، لا مقاييس الدقة. طلاب حقيقيون، إحباط حقيقي عند خطأ الإجابات. أعدت بناء خط RAG ثلاث مرات — كل إعادة بناء مدفوعة بمراقبة إخفاقات المستخدمين الحقيقيين.</p><h3>لماذا أسست سرايا AI</h3><p>بعد بناء وكيل صوت سرايا، بدأ الناس يسألون: "هل يمكن أن يعمل هذا لخدمة العملاء؟" السوق الناطق بالعربية ضخم وتخدمه الشركات بشكل ضعيف جداً. معظم شركات الذكاء الاصطناعي تتعامل مع العربية كأمر ثانوي. رأيت ثغرة حقيقية. سرايا AI هي محاولتي لسدها.</p><h3>ما كنت أتمنى معرفته مبكراً</h3><p>📌 اشحن مبكراً — 10 مستخدمين حقيقيين أفضل من 100 ساعة من التقييم الذاتي. 📌 اقرأ الأوراق البحثية لكن ابنِ منتجات — النظرية بدون تطبيق تخلق مهندسين يشرحون لكنهم لا يبنون. 📌 أصعب المشاكل ليست الذكاء الاصطناعي — بل الأنابيب وزمن الاستجابة والتكلفة والحالات الحافة. 📌 ابنِ علناً — يجذب المتعاونين والفرص.'}
-  },
-  dental:{
-    en:{tag:'Computer Vision · Medical',title:'Building DentalDiagnosisAI: YOLOv8 + Grad-CAM Explained',date:'October 2025 · 9 min read',body:'<p class="lead">Medical AI has a trust problem. A model can achieve 94% accuracy on a benchmark and still be useless in clinical practice — because clinicians don\'t trust a black box, and they shouldn\'t.</p><h3>Why dental images are hard</h3><p>Contrast between healthy and diseased tissue is often subtle. Multiple conditions co-occur. And false negatives (missed cavity, missed abscess) are significantly worse than false positives — standard accuracy metrics don\'t capture what actually matters.</p><h3>Stage 1: Detection with YOLOv8</h3><p>Fine-tuned YOLOv8m on annotated dental images with heavy augmentation. The hardest challenge: dental conditions don\'t have clean boundaries. I worked with a dentist to define annotation guidelines around the visually apparent lesion boundary — the only thing the model can learn from image features.</p><h3>Stage 2: Classification with EfficientNetV2</h3><p>Each detected region → EfficientNetV2-S for condition type (caries, gingivitis, abscess, healthy) and severity (mild, moderate, severe). Transfer learning from ImageNet — even though dental images look nothing like ImageNet, low-level feature detectors transfer remarkably well.</p><h3>The explainability layer: Grad-CAM</h3><p>Grad-CAM computes the gradient of the class score with respect to the final convolutional layer. The result: a heatmap overlay showing what the model focused on. When it aligns with the visible lesion, clinicians gain confidence. When it doesn\'t — even with high confidence — it\'s a quality signal that something is wrong. Explainability isn\'t just about trust. It\'s a quality signal.</p><h3>The Gradio interface</h3><p>Output: detection boxes, Grad-CAM heatmap per region, structured diagnostic report, and LLM-generated natural language explanation. The natural language layer was a late addition — but it\'s what made the tool usable for non-technical users.</p>'},
-    ar:{tag:'رؤية حاسوبية · طبي',title:'بناء DentalDiagnosisAI: شرح YOLOv8 + Grad-CAM',date:'أكتوبر 2025 · 9 دقائق قراءة',body:'<p class="lead">يعاني الذكاء الاصطناعي الطبي من مشكلة ثقة. يمكن لنموذج تحقيق دقة 94٪ على مجموعة بيانات تقييمية وما زال غير مفيد في الممارسة السريرية — لأن الأطباء لا يثقون في الصندوق الأسود، وهم محقون في ذلك.</p><h3>لماذا صور الأسنان صعبة</h3><p>التباين بين الأنسجة الصحية والمريضة غالباً خفي. تتعايش حالات متعددة. والنتائج السلبية الخاطئة (تجويف فائت، خراج فائت) أسوأ بكثير من الإيجابيات الخاطئة — مقاييس الدقة القياسية لا تلتقط ما يهم فعلاً.</p><h3>المرحلة الأولى: الكشف بـ YOLOv8</h3><p>ضبط دقيق لـ YOLOv8m على صور أسنان مُوسومة مع تضخيم بيانات مكثف. أصعب تحدٍّ: حالات الأسنان ليس لها حدود واضحة. عملت مع طبيب أسنان لتعريف إرشادات التوسيم.</p><h3>المرحلة الثانية: التصنيف بـ EfficientNetV2</h3><p>كل منطقة مكتشفة → EfficientNetV2-S لنوع الحالة (تسوس، التهاب لثة، خراج، صحي) وشدتها (خفيفة، متوسطة، شديدة). التعلم بالنقل من ImageNet يعمل بشكل مذهل حتى مع صور الأسنان.</p><h3>طبقة القابلية للتفسير: Grad-CAM</h3><p>يحسب Grad-CAM تدرج درجة الفئة بالنسبة للطبقة التفافية الأخيرة. النتيجة: تراكب خريطة حرارية تُظهر ما ركّز عليه النموذج. عندما يتوافق مع الآفة المرئية، يكتسب الأطباء الثقة. القابلية للتفسير ليست فقط عن الثقة — إنها إشارة جودة.</p><h3>واجهة Gradio</h3><p>المخرجات: صناديق الكشف، تراكب خريطة Grad-CAM لكل منطقة، تقرير تشخيصي منظم، وشرح باللغة الطبيعية يولده نموذج لغوي. طبقة اللغة الطبيعية كانت إضافة متأخرة — لكنها ما جعل الأداة قابلة للاستخدام للمستخدمين غير التقنيين.'}
-  }
+  voice:{en:{tag:'Voice AI · Engineering',title:'How I Built a Real-Time Arabic Voice Agent with Whisper + Claude',date:'March 2026 · 8 min read',body:'<p class="lead">When I started building Suraya, I had one hard constraint: respond in under 2 seconds — in Arabic.</p><h3>Why existing tools failed</h3><p>Most voice AI platforms treat Arabic as an afterthought. Accuracy dropped below 60% on real conversational speech.</p><h3>Component 1: Wake Word — Picovoice Porcupine</h3><p>Porcupine runs entirely on-device. I trained a custom wake word for "Hey Suraya". Sensitivity tuning was the hardest part — I settled on 0.6 after testing with 12 people in noisy environments.</p><h3>Component 2: STT — faster-whisper</h3><p>faster-whisper with int8 quantization dropped inference to under 600ms. Pre-warming the model on startup saved another 1.2 seconds of perceived latency.</p><h3>Component 3: Reasoning — Claude API</h3><p>Transcribed text goes to Claude with a system prompt that enforces an 80-word max per response and forbids markdown formatting.</p><h3>Component 4: TTS — ElevenLabs with emotion detection</h3><p>I run a lightweight emotion classifier before ElevenLabs. Based on the label, I adjust stability parameters to change voice expressiveness.</p><h3>Threading architecture</h3><p>All four components run on separate threads with non-blocking queues between stages. This is what makes sub-2s latency achievable.</p>'},ar:{tag:'الذكاء الاصطناعي الصوتي · هندسة',title:'كيف بنيت وكيل صوتي عربي بزمن استجابة فوري',date:'مارس 2026 · 8 دقائق قراءة',body:'<p class="lead">عندما بدأت في بناء سرايا، كان لدي قيد صارم واحد: الاستجابة في أقل من ثانيتين — بالعربية.</p><h3>لماذا فشلت الأدوات الموجودة</h3><p>معظم منصات الذكاء الاصطناعي الصوتي تتعامل مع العربية كأمر ثانوي. انخفضت الدقة إلى أقل من 60% على الكلام الحواري الحقيقي.</p>'}},
+  agents:{en:{tag:'Architecture · LLMs',title:'AI Agents vs. RAG Pipelines: When to Use Which',date:'February 2026 · 6 min read',body:'<p class="lead">I\'ve built both — RAG in Lumiq and MentorX, agents in Suraya Research Team.</p><h3>What RAG actually is</h3><p>RAG embeds documents, stores them in a vector database, and at query time retrieves relevant chunks. It\'s not a reasoning system.</p><h3>What agents actually are</h3><p>An agent is an LLM in a loop with tools. It receives a goal, picks a tool, uses it, observes the result, and decides what to do next.</p><h3>Use RAG when...</h3><p>✅ Fixed document corpus ✅ Questions have factual answers ✅ Latency matters ✅ Cost matters</p><h3>Use agents when...</h3><p>✅ Task requires multiple steps ✅ Output needs verification ✅ Task involves external actions</p>'},ar:{tag:'المعمارية · نماذج اللغة',title:'وكلاء الذكاء الاصطناعي مقابل خطوط RAG',date:'فبراير 2026 · 6 دقائق قراءة',body:'<p class="lead">بنيت كليهما — RAG في Lumiq وMentorX، والوكلاء في فريق بحث سرايا.</p>'}},
+  llmprod:{en:{tag:'MLOps · Production',title:'What I Learned Deploying LLMs to Production',date:'January 2026 · 10 min read',body:'<p class="lead">Notebooks lie. Everything works in a notebook. Production is where assumptions get stress-tested.</p><h3>1. Streaming is not optional</h3><p>Waiting 8 seconds for a response to appear all at once feels broken. Streaming makes a 6-second response feel fast.</p><h3>2. Prompt versioning is real engineering</h3><p>Your system prompt is code. Version control it.</p><h3>3. Token costs will surprise you</h3><p>In Lumiq I injected full conversation history into every API call. With 40-50 message conversations, I was spending 15,000 tokens per call. Fix: sliding window context, conversation summarization.</p><h3>4. Log everything</h3><p>Log every API call: prompt, response, latency, token count, session ID.</p>'},ar:{tag:'MLOps · الإنتاج',title:'ما تعلمته من نشر نماذج اللغة الكبيرة في الإنتاج',date:'يناير 2026 · 10 دقائق قراءة',body:'<p class="lead">دفاتر ملاحظات Jupyter تكذب. الإنتاج هو المكان الذي تُختبر فيه افتراضاتك.</p>'}},
+  multiagent:{en:{tag:'Multi-Agent · Design',title:'Designing Multi-Agent Systems That Actually Work',date:'December 2025 · 7 min read',body:'<p class="lead">Multi-agent systems are seductive. Also where most teams get burned.</p><h3>Role design: the most important decision</h3><p><strong>Scout:</strong> gathers raw facts. <strong>Analyst:</strong> critiques Scout\'s output. <strong>Writer:</strong> synthesizes validated material. Without explicit boundaries, agents drift.</p><h3>Failure modes</h3><p>⚠️ Infinite loops: set a hard iteration limit. ⚠️ Role collapse: enforce boundaries explicitly. ⚠️ Token explosion: set per-agent context limits.</p>'},ar:{tag:'متعدد الوكلاء · تصميم',title:'تصميم أنظمة متعددة الوكلاء تعمل فعلاً',date:'ديسمبر 2025 · 7 دقائق قراءة',body:'<p class="lead">الأنظمة متعددة الوكلاء مغرية. وأيضاً حيث تحترق معظم الفرق.</p>'}},
+  journey:{en:{tag:'Career · AI',title:'From AI Student to AI Founder: My Journey',date:'November 2025 · 5 min read',body:'<p class="lead">I didn\'t plan to found an AI company. But somewhere between my first neural network and my third shipped product, the plan changed.</p><h3>The beginning: things that didn\'t work</h3><p>My first serious AI project was Arabic restaurant review sentiment analysis. I achieved 71% accuracy and thought I\'d done something impressive. I hadn\'t.</p><h3>Why I started Suraya AI</h3><p>After building Suraya Voice Agent, people started asking: "Can this work for customer service?" The Arabic-speaking market is enormous and dramatically underserved.</p>'},ar:{tag:'المسيرة المهنية · الذكاء الاصطناعي',title:'من طالب ذكاء اصطناعي إلى مؤسس شركة: رحلتي',date:'نوفمبر 2025 · 5 دقائق قراءة',body:'<p class="lead">لم أكن أخطط لتأسيس شركة ذكاء اصطناعي. لكن في مكان ما بين شبكتي العصبية الأولى ومنتجي الثالث المُشحون، تغيرت الخطة.</p>'}},
+  dental:{en:{tag:'Computer Vision · Medical',title:'Building DentalDiagnosisAI: YOLOv8 + Grad-CAM Explained',date:'October 2025 · 9 min read',body:'<p class="lead">Medical AI has a trust problem. A model can achieve 94% accuracy and still be useless in clinical practice.</p><h3>Stage 1: Detection with YOLOv8</h3><p>Fine-tuned YOLOv8m on annotated dental images with heavy augmentation.</p><h3>Stage 2: Classification with EfficientNetV2</h3><p>Each detected region → EfficientNetV2-S for condition type and severity.</p><h3>The explainability layer: Grad-CAM</h3><p>Grad-CAM computes the gradient of the class score with respect to the final convolutional layer. The result: a heatmap overlay showing what the model focused on.</p>'},ar:{tag:'رؤية حاسوبية · طبي',title:'بناء DentalDiagnosisAI: شرح YOLOv8 + Grad-CAM',date:'أكتوبر 2025 · 9 دقائق قراءة',body:'<p class="lead">يعاني الذكاء الاصطناعي الطبي من مشكلة ثقة.</p>'}}
 };
 
-function openBlog(id){
-  var lang=currentLang,p=BLOG[id][lang];
-  var authorName=lang==='ar'?'العز الدميني':'Alezz Aldumaini';
-  var html='<div style="margin-bottom:1.5rem;"><span class="blog-tag-el">'+p.tag+'</span><h2 style="font-size:1.4rem;font-weight:800;line-height:1.3;margin-bottom:.5rem;">'+p.title+'</h2><p style="color:var(--muted);font-size:.8rem;">'+authorName+' · '+p.date+'</p></div><hr style="border:none;border-top:1px solid var(--border);margin-bottom:1.5rem;"><div class="blog-post-body">'+p.body+'</div><hr style="border:none;border-top:1px solid var(--border);margin:2rem 0 1.2rem;"><div style="display:flex;align-items:center;gap:.8rem;"><div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:1rem;">🤖</div><div><div style="font-weight:700;font-size:.9rem;">'+authorName+'</div><div style="color:var(--muted);font-size:.78rem;">'+T[currentLang].footerRole+'</div></div></div>';
-  openModal('blog',html);
-}
+function openBlog(id){var lang=currentLang,p=BLOG[id][lang];var authorName=lang==='ar'?'العز الدميني':'Alezz Aldumaini';var html='<div style="margin-bottom:1.5rem;"><span class="blog-tag-el">'+p.tag+'</span><h2 style="font-size:1.4rem;font-weight:800;line-height:1.3;margin-bottom:.5rem;">'+p.title+'</h2><p style="color:var(--muted);font-size:.8rem;">'+authorName+' · '+p.date+'</p></div><hr style="border:none;border-top:1px solid var(--border);margin-bottom:1.5rem;"><div class="blog-post-body">'+p.body+'</div>';openModal('blog',html);}
 
-// ─── CONTACT FORM ─────────────────────────────────────────────────────────
-function sendForm(){
-  var name=document.getElementById('cf-name').value.trim(),email=document.getElementById('cf-email').value.trim(),subject=document.getElementById('cf-subject').value.trim(),message=document.getElementById('cf-message').value.trim(),btn=document.getElementById('cf-btn'),status=document.getElementById('cf-status');
-  if(!name||!email||!message){status.style.color='#ff6b6b';status.textContent=T[currentLang].errMsg;return;}
-  btn.disabled=true;btn.textContent=T[currentLang].sending;status.textContent='';
-  fetch('https://formspree.io/f/mqeylepl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,subject:subject,message:message})})
-  .then(function(r){if(r.ok){status.style.color='#06ffa5';status.textContent=T[currentLang].sentMsg;['cf-name','cf-email','cf-subject','cf-message'].forEach(function(id){document.getElementById(id).value='';});}else{throw new Error();}})
-  .catch(function(){status.style.color='#ff6b6b';status.textContent=T[currentLang].errSend;})
-  .finally(function(){btn.disabled=false;btn.textContent=T[currentLang].sendBtn;});
-}
+function sendForm(){var name=document.getElementById('cf-name').value.trim(),email=document.getElementById('cf-email').value.trim(),subject=document.getElementById('cf-subject').value.trim(),message=document.getElementById('cf-message').value.trim(),btn=document.getElementById('cf-btn'),status=document.getElementById('cf-status');if(!name||!email||!message){status.style.color='#ff6b6b';status.textContent=T[currentLang].errMsg;return;}btn.disabled=true;btn.textContent=T[currentLang].sending;status.textContent='';fetch('https://formspree.io/f/mqeylepl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,subject:subject,message:message})}).then(function(r){if(r.ok){status.style.color='#06ffa5';status.textContent=T[currentLang].sentMsg;['cf-name','cf-email','cf-subject','cf-message'].forEach(function(id){document.getElementById(id).value='';});}else{throw new Error();}}).catch(function(){status.style.color='#ff6b6b';status.textContent=T[currentLang].errSend;}).finally(function(){btn.disabled=false;btn.textContent=T[currentLang].sendBtn;});}
 
-// ─── TRANSLATION DATA ─────────────────────────────────────────────────────
 var T={
   en:{
-    nav:['About','Skills','Projects','Experience','Certifications','Testimonials','Blog','Contact'],
+    nav:['About','Skills','Projects','Experience','Education','Certifications','Blog','Contact'],
     badge:'Open to opportunities · AI Engineer',
     role:'Artificial Intelligence Engineer',
-    btn1:'View My Work',btn2:"Let's Talk",
+    btn1:'View My Work',btn2:"Let's Talk",btn3:'⬇ Download CV',
     stats:['AI Projects','Years in AI','AI Startup Founded','Languages'],
     lbl_about:'Who I am',h2_about:'About Me',
     lbl_skills:'What I work with',h2_skills:'Skills & Technologies',
     lbl_projects:"What I've built",h2_projects:'Projects',
-    lbl_exp:'My journey',h2_exp:'Education & Experience',
+    lbl_exp:'Where I\'ve worked',h2_exp:'Professional Experience',
+    lbl_edu:'Where I\'ve studied',h2_edu:'Education',
     lbl_cert:'Lifelong Learning',h2_cert:'Courses & Certifications',
     lbl_test:'What others say',h2_test:'Testimonials',
     lbl_blog:'Thoughts & writing',h2_blog:'Blog',
@@ -561,52 +462,19 @@ var T={
     il:['📍 Location','🚀 Venture','💼 Role','🎓 Degree','🏫 University','🌐 Languages','✅ Status'],
     iv:['Saudi Arabia','Suraya AI','AI Engineer & Founder','B.Sc. AI Engineering','Bahçeşehir University','AR · EN · TR','<span class="status-badge"><span class="dot"></span>Open to work</span>'],
     aboutPs:["I'm <strong>Alezz Aldumaini</strong> — an AI Engineer who believes the best way to understand intelligence is to build it, with hands-on experience building real AI systems from scratch.","I've designed and shipped full-stack AI applications: RAG pipelines, fine-tuned LLMs, computer vision models, and multi-agent systems. I don't just study AI — I apply it to problems that matter.","If you're building something ambitious with AI — let's talk."],
-    skills:[
-      {icon:'🧠',title:'AI / ML',tags:['Deep Learning','NLP','LLMs','RAG Systems','LoRA Fine-tuning','Transformers','Computer Vision','AI Agents','Voice AI','Multi-Agent Systems']},
-      {icon:'⚙️',title:'Frameworks & Models',tags:['PyTorch','TensorFlow','Scikit-learn','HuggingFace','YOLOv8','RoBERTa','CodeT5']},
-      {icon:'💻',title:'Engineering',tags:['Python','SQL','Flask','FastAPI','MongoDB','REST APIs','Git','Gradio','SSE Streaming']},
-      {icon:'☁️',title:'Cloud & MLOps',tags:['AWS','Azure ML','MLOps','Docker','AI Pipelines']}
-    ],
+    skills:[{icon:'🧠',title:'AI / ML',tags:['Deep Learning','NLP','LLMs','RAG Systems','LoRA Fine-tuning','Transformers','Computer Vision','AI Agents','Voice AI','Multi-Agent Systems']},{icon:'⚙️',title:'Frameworks & Models',tags:['PyTorch','TensorFlow','Scikit-learn','HuggingFace','YOLOv8','RoBERTa','CodeT5']},{icon:'💻',title:'Engineering',tags:['Python','SQL','Flask','FastAPI','MongoDB','REST APIs','Git','Gradio','SSE Streaming']},{icon:'☁️',title:'Cloud & MLOps',tags:['AWS','Azure ML','MLOps','Docker','AI Pipelines']}],
     filters:['All','NLP / LLMs','Computer Vision','Platforms','AI Agents'],
     filterKeys:['all','nlp','cv','platform','agent'],
-    projects:[
-      {icon:'🎙️',featured:true,cat:'agent',title:'Suraya Voice Agent',date:'AI Agents · Voice AI',desc:'A Python-based voice AI agent that listens, thinks, and speaks with emotional intelligence.',bullets:['Wake word detection using Picovoice Porcupine.','Real-time STT with faster-whisper + Claude.','Expressive TTS with emotion detection via ElevenLabs.','Persistent memory across sessions.'],tags:['Python','Claude API','Whisper','ElevenLabs','Voice AI'],gh:true,demo:true,cs:'suraya'},
-      {icon:'🤖',featured:true,cat:'agent platform',title:'Suraya Research Team',date:'Multi-Agent System · Web UI',desc:'3 specialized agents collaborate in real-time to research any topic and produce a polished report.',bullets:['Scout → Analyst → Writer pipeline with distinct roles.','Real-time streaming via Server-Sent Events.','FastAPI backend + custom dark-themed UI.'],tags:['Python','FastAPI','Claude API','Multi-Agent','Streaming'],gh:true,cs:'research'},
-      {icon:'🎓',featured:true,cat:'nlp platform',title:'MentorX — Personalized Learning',date:'06/2025 – 07/2025',desc:'',bullets:['Full-stack adaptive educational platform with API backend.','AI analyzes student performance to generate custom quizzes.','Multimodal summarization of PDFs, videos, audio using LLMs.'],tags:['LLMs','Python','RAG','Multimodal AI','EdTech'],gh:true,cs:'mentorx'},
-      {icon:'🏫',featured:true,cat:'nlp platform',title:'Lumiq AI — Learning Platform',date:'Full-Stack AI System',desc:'',bullets:['End-to-end platform for students, teachers, and parents.','RAG system answers questions from uploaded course materials.','Document ingestion: PDF, DOCX, TXT.'],tags:['Python','Flask','MongoDB','LLMs','RAG'],gh:true},
-      {icon:'🦷',featured:false,cat:'cv',title:'DentalDiagnosisAI',date:'Computer Vision · YOLOv8 + EfficientNetV2',desc:'',bullets:['Dental disease detection and severity classification.','YOLOv8 detection + EfficientNetV2 classification.','Grad-CAM explainability + Gradio interface.'],tags:['YOLOv8','EfficientNetV2','Grad-CAM','Gradio'],gh:true},
-      {icon:'🔧',featured:false,cat:'nlp',title:'CodeT5 + LoRA — Code Debugger',date:'05/2025 – 06/2025',desc:'',bullets:['Fine-tuned CodeT5 with LoRA for automated code debugging.','Syntax and logic error detection with reduced compute.'],tags:['PyTorch','LoRA','HuggingFace','CodeT5'],gh:true}
-    ],
+    projects:[{icon:'🎙️',featured:true,cat:'agent',title:'Suraya Voice Agent',date:'AI Agents · Voice AI',desc:'A Python-based voice AI agent that listens, thinks, and speaks with emotional intelligence.',bullets:['Wake word detection using Picovoice Porcupine.','Real-time STT with faster-whisper + Claude.','Expressive TTS with emotion detection via ElevenLabs.','Persistent memory across sessions.'],tags:['Python','Claude API','Whisper','ElevenLabs','Voice AI'],gh:true,demo:true,cs:'suraya'},{icon:'🤖',featured:true,cat:'agent platform',title:'Suraya Research Team',date:'Multi-Agent System · Web UI',desc:'3 specialized agents collaborate in real-time to research any topic and produce a polished report.',bullets:['Scout → Analyst → Writer pipeline with distinct roles.','Real-time streaming via Server-Sent Events.','FastAPI backend + custom dark-themed UI.'],tags:['Python','FastAPI','Claude API','Multi-Agent','Streaming'],gh:true,cs:'research'},{icon:'🎓',featured:true,cat:'nlp platform',title:'MentorX — Personalized Learning',date:'06/2025 – 07/2025',desc:'',bullets:['Full-stack adaptive educational platform with API backend.','AI analyzes student performance to generate custom quizzes.','Multimodal summarization of PDFs, videos, audio using LLMs.'],tags:['LLMs','Python','RAG','Multimodal AI','EdTech'],gh:true,cs:'mentorx'},{icon:'🏫',featured:true,cat:'nlp platform',title:'Lumiq AI — Learning Platform',date:'Full-Stack AI System',desc:'',bullets:['End-to-end platform for students, teachers, and parents.','RAG system answers questions from uploaded course materials.','Document ingestion: PDF, DOCX, TXT.'],tags:['Python','Flask','MongoDB','LLMs','RAG'],gh:true},{icon:'🦷',featured:false,cat:'cv',title:'DentalDiagnosisAI',date:'Computer Vision · YOLOv8 + EfficientNetV2',desc:'',bullets:['Dental disease detection and severity classification.','YOLOv8 detection + EfficientNetV2 classification.','Grad-CAM explainability + Gradio interface.'],tags:['YOLOv8','EfficientNetV2','Grad-CAM','Gradio'],gh:true},{icon:'🔧',featured:false,cat:'nlp',title:'CodeT5 + LoRA — Code Debugger',date:'05/2025 – 06/2025',desc:'',bullets:['Fine-tuned CodeT5 with LoRA for automated code debugging.','Syntax and logic error detection with reduced compute.'],tags:['PyTorch','LoRA','HuggingFace','CodeT5'],gh:true}],
     moreGh:'🐙 More Projects on GitHub',
-    timeline:[
-      {date:'2026',title:'Founder — Suraya AI',desc:'Founded Suraya AI — building advanced AI platforms and intelligent systems to solve real-world challenges at scale.'},
-      {date:'06/2025 – 07/2025',title:'MentorX — Personalized Learning',desc:'Full-stack AI adaptive learning platform with multimodal summarization, custom quiz generation, and adaptive study plans.'},
-      {date:'05/2025 – 06/2025',title:'CodeT5 + LoRA Fine-tuning',desc:'Parameter-efficient fine-tuning of CodeT5 for automated code debugging using LoRA on PyTorch and HuggingFace.'},
-      {date:'2024',title:'Lumiq AI Platform',desc:'Full-stack AI educational platform: LLM assistant, RAG pipeline, multi-role dashboards, and MongoDB architecture.'},
-      {date:'2023 – 2024',title:'AI Research Projects',desc:'VehicleDamageAI, AspectSentimentAI, and DentalDiagnosisAI — applying SOTA models to real-world problems.'},
-      {date:'2021 – 2026',title:'B.Sc. Artificial Intelligence Engineering',desc:'Bahçeşehir University · Istanbul, Turkey'}
-    ],
-    certs:[
-      {icon:'🧠',title:'AI & Machine Learning',tags:['Deep Learning with PyTorch — IBM','Deep Learning with Keras & TF — IBM','Machine Learning with Python — IBM','AI Capstone Project — IBM','Applied Machine Learning — Alberta']},
-      {icon:'✨',title:'Generative AI & LLMs',tags:['GenAI: Foundation Models — IBM','GenAI: Introduction & Apps — IBM','Prompt Engineering — IBM','GenAI: Ethics — IBM']},
-      {icon:'☁️',title:'Cloud, MLOps & Infra',tags:['MLOps: SageMaker & Azure — Duke','Azure Cloud Services — Microsoft','Microservices & Redis on GCP — Google']},
-      {icon:'📊',title:'Data Science & PM',tags:['Data Science Methodology — IBM','Python for Data Science — IBM','Agile Project Management — CU Boulder','Ethics, Tech & Engineering — TU/e']}
-    ],
-    testimonials:[
-      {text:'Working with Alezz on the MentorX capstone was exceptional. He drove the AI architecture from day one — the adaptive quiz engine and multimodal ingestion pipeline he built were far beyond what we expected. A genuinely talented engineer.',name:'Muhannad Zannerni',role:'MentorX Capstone Team Member',avatar:'🎓'},
-      {text:"Alezz is one of the most focused AI engineers I've worked with. His voice agent work at Suraya AI demonstrates a deep understanding of real-time systems, Arabic NLP, and user experience — all at once.",name:'Dr. Khalid Nasser',role:'AI Research Lead · Academic Institution',avatar:'🤖'}
-    ],
-    blogCards:[
-      {id:'voice',tag:'Voice AI · Engineering',title:'How I Built a Real-Time Arabic Voice Agent with Whisper + Claude',desc:'Wake word detection, emotional TTS, and the latency challenges of sub-2s real-time response.',time:'8'},
-      {id:'agents',tag:'Architecture · LLMs',title:'AI Agents vs. RAG Pipelines: When to Use Which',desc:'Breaking down the architectural decision with real examples from projects I\'ve shipped.',time:'6'},
-      {id:'llmprod',tag:'MLOps · Production',title:'What I Learned Deploying LLMs to Production',desc:'Streaming, error handling, cost management, and latency optimization.',time:'10'},
-      {id:'multiagent',tag:'Multi-Agent · Design',title:'Designing Multi-Agent Systems That Actually Work',desc:'Agent roles, communication protocols, and failure recovery.',time:'7'},
-      {id:'journey',tag:'Career · AI',title:'From AI Student to AI Founder: My Journey',desc:'How I went from building my first neural network to founding Suraya AI.',time:'5'},
-      {id:'dental',tag:'Computer Vision · Medical',title:'Building DentalDiagnosisAI: YOLOv8 + Grad-CAM Explained',desc:'Combining detection with explainability to build a trustworthy diagnostic tool.',time:'9'}
-    ],
+    timeline:[{date:'2026 – Present',title:'Founder & AI Engineer — Suraya AI',desc:'Founded Suraya AI — building advanced AI voice agents, multi-agent research platforms, and intelligent systems to solve real-world challenges at scale.'},{date:'02/2026 – Present',title:'AI Transcription Evaluator — Uber AI Solutions (Remote)',desc:'Optimized linguistic accuracy of large-scale Arabic datasets for AI transcription models. Identified and corrected audio-to-text alignment discrepancies, leveraged native Arabic expertise to refine cultural nuances, and spearheaded structured annotation workflows to support continuous improvement of enterprise-grade AI systems.'},{date:'12/2024 – 06/2025',title:'AI Team Lead & Backend Integration Specialist — MentorX, Bahçeşehir University Capstone',desc:'Led a team of 5 AI engineering students in designing and delivering MentorX, an LLM-powered personalized learning platform. Built the FastAPI backend, integrated Ollama 7B for real-time AI responses, engineered the prompt engineering layer, and managed content ingestion pipelines for adaptive learning.'}],
+    education:[{date:'09/2021 – 01/2026',title:'B.Sc. Artificial Intelligence Engineering',desc:'Bahçeşehir University · Istanbul, Turkey · Graduated January 2026'}],
+    certs:[{icon:'🧠',title:'AI & Machine Learning',tags:['Deep Learning with PyTorch — IBM','Deep Learning with Keras & TF — IBM','Machine Learning with Python — IBM','AI Capstone Project — IBM','Applied Machine Learning — Alberta']},{icon:'✨',title:'Generative AI & LLMs',tags:['GenAI: Foundation Models — IBM','GenAI: Introduction & Apps — IBM','Prompt Engineering — IBM','GenAI: Ethics — IBM']},{icon:'☁️',title:'Cloud, MLOps & Infra',tags:['MLOps: SageMaker & Azure — Duke','Azure Cloud Services — Microsoft','Microservices & Redis on GCP — Google']},{icon:'📊',title:'Data Science & PM',tags:['Data Science Methodology — IBM','Python for Data Science — IBM','Agile Project Management — CU Boulder','Ethics, Tech & Engineering — TU/e']}],
+    testimonials:[{text:'Working with Alezz on the MentorX capstone was exceptional. He drove the AI architecture from day one — the adaptive quiz engine and multimodal ingestion pipeline he built were far beyond what we expected. A genuinely talented engineer.',name:'Muhannad Zannerni',role:'MentorX Capstone Team Member',avatar:'🎓'},{text:"Alezz is one of the most focused AI engineers I've worked with. His voice agent work at Suraya AI demonstrates a deep understanding of real-time systems, Arabic NLP, and user experience — all at once.",name:'Dr. Khalid Nasser',role:'AI Research Lead · Academic Institution',avatar:'🤖'}],
+    blogCards:[{id:'voice',tag:'Voice AI · Engineering',title:'How I Built a Real-Time Arabic Voice Agent with Whisper + Claude',desc:'Wake word detection, emotional TTS, and the latency challenges of sub-2s real-time response.',time:'8'},{id:'agents',tag:'Architecture · LLMs',title:'AI Agents vs. RAG Pipelines: When to Use Which',desc:"Breaking down the architectural decision with real examples from projects I've shipped.",time:'6'},{id:'llmprod',tag:'MLOps · Production',title:'What I Learned Deploying LLMs to Production',desc:'Streaming, error handling, cost management, and latency optimization.',time:'10'},{id:'multiagent',tag:'Multi-Agent · Design',title:'Designing Multi-Agent Systems That Actually Work',desc:'Agent roles, communication protocols, and failure recovery.',time:'7'},{id:'journey',tag:'Career · AI',title:'From AI Student to AI Founder: My Journey',desc:'How I went from building my first neural network to founding Suraya AI.',time:'5'},{id:'dental',tag:'Computer Vision · Medical',title:'Building DentalDiagnosisAI: YOLOv8 + Grad-CAM Explained',desc:'Combining detection with explainability to build a trustworthy diagnostic tool.',time:'9'}],
     readTime:'min read',
-    footerNav:['About','Skills','Projects','Experience','Certifications','Testimonials','Blog','Contact'],
-    footerLinks:['#about','#skills','#projects','#experience','#certifications','#testimonials','#blog','#contact'],
+    footerNav:['About','Skills','Projects','Experience','Education','Certifications','Blog','Contact'],
+    footerLinks:['#about','#skills','#projects','#experience','#education','#certifications','#blog','#contact'],
     footerCopy:'© 2026 <span>Alezz Aldumaini</span> · All rights reserved.',
     footerRole:'AI Engineer & Founder, Suraya AI',
     ph:['Your Name','Your Email','Subject','Your Message'],
@@ -619,70 +487,38 @@ var T={
     typing:["I don't just imagine the future of AI \u2014 I build it.","From LLM pipelines to full-stack AI platforms.","Engineering intelligent systems that solve real problems."]
   },
   ar:{
-    nav:['عني','المهارات','المشاريع','الخبرة','الشهادات','التوصيات','المدونة','تواصل'],
+    nav:['عني','المهارات','المشاريع','الخبرة','التعليم','الشهادات','المدونة','تواصل'],
     badge:'متاح للفرص · مهندس ذكاء اصطناعي',
     role:'مهندس ذكاء اصطناعي ومؤسس شركة ناشئة',
-    btn1:'استعرض أعمالي',btn2:'تواصل معي',
+    btn1:'استعرض أعمالي',btn2:'تواصل معي',btn3:'⬇ تحميل السيرة الذاتية',
     stats:['مشروع ذكاء اصطناعي','سنوات في الذكاء الاصطناعي','شركة ناشئة أسستها','لغات'],
     lbl_about:'من أنا',h2_about:'نبذة عني',
     lbl_skills:'ما أعمل به',h2_skills:'المهارات والتقنيات',
     lbl_projects:'ما بنيته',h2_projects:'المشاريع',
-    lbl_exp:'مسيرتي',h2_exp:'التعليم والخبرة',
+    lbl_exp:'أين عملت',h2_exp:'الخبرة المهنية',
+    lbl_edu:'أين درست',h2_edu:'التعليم',
     lbl_cert:'التعلم المستمر',h2_cert:'الدورات والشهادات',
     lbl_test:'ماذا يقول الآخرون',h2_test:'التوصيات',
     lbl_blog:'أفكار وكتابات',h2_blog:'المدونة',
     lbl_contact:'لنتواصل',h2_contact:'تواصل معي',
-    contactDesc:'أنا منفتح على فرص العمل في هندسة الذكاء الاصطناعي، والتعاون البحثي، وشراكات الشركات الناشئة. سواء أردت بناء شيء معاً أو مجرد الحديث عن الذكاء الاصطناعي — لنتواصل.',
+    contactDesc:'أنا منفتح على فرص العمل في هندسة الذكاء الاصطناعي، والتعاون البحثي، وشراكات الشركات الناشئة.',
     infoTitle:'معلومات سريعة',
     il:['📍 الموقع','🚀 المشروع','💼 الدور','🎓 الشهادة','🏫 الجامعة','🌐 اللغات','✅ الحالة'],
     iv:['المملكة العربية السعودية','سرايا AI','مهندس ذكاء اصطناعي ومؤسس','بكالوريوس هندسة الذكاء الاصطناعي','جامعة بهشهير','AR · EN · TR','<span class="status-badge"><span class="dot"></span>متاح للعمل</span>'],
-    aboutPs:['أنا <strong>العز الدميني</strong> — مهندس ذكاء اصطناعي يؤمن بأن أفضل طريقة لفهم الذكاء هي بناؤه، مع خبرة عملية حقيقية في بناء أنظمة ذكاء اصطناعي من الصفر.','صممت ونفذت تطبيقات ذكاء اصطناعي متكاملة: خطوط RAG، نماذج LLM مضبوطة، رؤية حاسوبية، وأنظمة متعددة الوكلاء. لا أكتفي بدراسة الذكاء — بل أطبقه على مشكلات حقيقية.','إن كنت تبني شيئاً طموحاً بالذكاء الاصطناعي — فلنتحدث.'],
-    skills:[
-      {icon:'🧠',title:'الذكاء الاصطناعي / تعلم الآلة',tags:['التعلم العميق','معالجة اللغة الطبيعية','نماذج اللغة الكبيرة','أنظمة RAG','الضبط الدقيق LoRA','المحولات','رؤية حاسوبية','وكلاء الذكاء الاصطناعي','الذكاء الصوتي','أنظمة متعددة الوكلاء']},
-      {icon:'⚙️',title:'الأطر والنماذج',tags:['PyTorch','TensorFlow','Scikit-learn','HuggingFace','YOLOv8','RoBERTa','CodeT5']},
-      {icon:'💻',title:'الهندسة البرمجية',tags:['Python','SQL','Flask','FastAPI','MongoDB','REST APIs','Git','Gradio','SSE Streaming']},
-      {icon:'☁️',title:'السحابة وعمليات النماذج',tags:['AWS','Azure ML','MLOps','Docker','خطوط الذكاء الاصطناعي']}
-    ],
+    aboutPs:['أنا <strong>العز الدميني</strong> — مهندس ذكاء اصطناعي يؤمن بأن أفضل طريقة لفهم الذكاء هي بناؤه.','صممت ونفذت تطبيقات ذكاء اصطناعي متكاملة: خطوط RAG، نماذج LLM مضبوطة، رؤية حاسوبية، وأنظمة متعددة الوكلاء.','إن كنت تبني شيئاً طموحاً بالذكاء الاصطناعي — فلنتحدث.'],
+    skills:[{icon:'🧠',title:'الذكاء الاصطناعي / تعلم الآلة',tags:['التعلم العميق','معالجة اللغة الطبيعية','نماذج اللغة الكبيرة','أنظمة RAG','الضبط الدقيق LoRA','المحولات','رؤية حاسوبية','وكلاء الذكاء الاصطناعي','الذكاء الصوتي','أنظمة متعددة الوكلاء']},{icon:'⚙️',title:'الأطر والنماذج',tags:['PyTorch','TensorFlow','Scikit-learn','HuggingFace','YOLOv8','RoBERTa','CodeT5']},{icon:'💻',title:'الهندسة البرمجية',tags:['Python','SQL','Flask','FastAPI','MongoDB','REST APIs','Git','Gradio','SSE Streaming']},{icon:'☁️',title:'السحابة وعمليات النماذج',tags:['AWS','Azure ML','MLOps','Docker','خطوط الذكاء الاصطناعي']}],
     filters:['الكل','معالجة اللغة / LLMs','رؤية حاسوبية','المنصات','وكلاء الذكاء الاصطناعي'],
     filterKeys:['all','nlp','cv','platform','agent'],
-    projects:[
-      {icon:'🎙️',featured:true,cat:'agent',title:'وكيل صوت سرايا',date:'وكلاء الذكاء الاصطناعي · الذكاء الصوتي',desc:'وكيل ذكاء اصطناعي صوتي يستمع ويفكر ويتحدث بذكاء عاطفي.',bullets:['كشف كلمة التنبيه باستخدام Picovoice Porcupine.','تحويل كلام فوري باستخدام faster-whisper + Claude.','تحويل نص إلى كلام تعبيري مع كشف العاطفة عبر ElevenLabs.','ذاكرة دائمة عبر الجلسات.'],tags:['Python','Claude API','Whisper','ElevenLabs','الذكاء الصوتي'],gh:true,demo:true,cs:'suraya'},
-      {icon:'🤖',featured:true,cat:'agent platform',title:'فريق بحث سرايا',date:'نظام متعدد الوكلاء · واجهة ويب',desc:'3 وكلاء متخصصون يتعاونون في الوقت الفعلي لبحث أي موضوع وإنتاج تقرير منقح.',bullets:['أنبوب الكشاف → المحلل → الكاتب بأدوار متميزة.','بث فوري عبر Server-Sent Events.','خلفية FastAPI + واجهة ويب مخصصة.'],tags:['Python','FastAPI','Claude API','متعدد الوكلاء','بث فوري'],gh:true,cs:'research'},
-      {icon:'🎓',featured:true,cat:'nlp platform',title:'MentorX — التعلم الشخصي',date:'06/2025 – 07/2025',desc:'',bullets:['منصة تعليمية تكيفية متكاملة مع خلفية API.','الذكاء الاصطناعي يحلل أداء الطالب لتوليد اختبارات مخصصة.','تلخيص متعدد الوسائط لملفات PDF ومقاطع الفيديو والصوت.'],tags:['نماذج اللغة','Python','RAG','ذكاء متعدد الوسائط','تقنية التعليم'],gh:true,cs:'mentorx'},
-      {icon:'🏫',featured:true,cat:'nlp platform',title:'منصة Lumiq للتعليم',date:'نظام ذكاء اصطناعي متكامل',desc:'',bullets:['منصة شاملة للطلاب والمعلمين وأولياء الأمور.','نظام RAG يجيب على الأسئلة من المواد المرفوعة.','استيعاب المستندات: PDF, DOCX, TXT.'],tags:['Python','Flask','MongoDB','نماذج اللغة','RAG'],gh:true},
-      {icon:'🦷',featured:false,cat:'cv',title:'DentalDiagnosisAI',date:'رؤية حاسوبية · YOLOv8 + EfficientNetV2',desc:'',bullets:['كشف أمراض الأسنان وتصنيف الشدة من الصور.','YOLOv8 للكشف + EfficientNetV2 للتصنيف.','قابلية التفسير بـ Grad-CAM + واجهة Gradio.'],tags:['YOLOv8','EfficientNetV2','Grad-CAM','Gradio'],gh:true},
-      {icon:'🔧',featured:false,cat:'nlp',title:'CodeT5 + LoRA — مصحح الأكواد',date:'05/2025 – 06/2025',desc:'',bullets:['ضبط دقيق لـ CodeT5 بـ LoRA لتصحيح الأكواد تلقائياً.','كشف أخطاء الصياغة والمنطق بتكلفة حسابية منخفضة.'],tags:['PyTorch','LoRA','HuggingFace','CodeT5'],gh:true}
-    ],
+    projects:[{icon:'🎙️',featured:true,cat:'agent',title:'وكيل صوت سرايا',date:'وكلاء الذكاء الاصطناعي · الذكاء الصوتي',desc:'وكيل ذكاء اصطناعي صوتي يستمع ويفكر ويتحدث بذكاء عاطفي.',bullets:['كشف كلمة التنبيه باستخدام Picovoice Porcupine.','تحويل كلام فوري باستخدام faster-whisper + Claude.','تحويل نص إلى كلام تعبيري مع كشف العاطفة عبر ElevenLabs.','ذاكرة دائمة عبر الجلسات.'],tags:['Python','Claude API','Whisper','ElevenLabs','الذكاء الصوتي'],gh:true,demo:true,cs:'suraya'},{icon:'🤖',featured:true,cat:'agent platform',title:'فريق بحث سرايا',date:'نظام متعدد الوكلاء · واجهة ويب',desc:'3 وكلاء متخصصون يتعاونون في الوقت الفعلي لبحث أي موضوع.',bullets:['أنبوب الكشاف → المحلل → الكاتب بأدوار متميزة.','بث فوري عبر Server-Sent Events.','خلفية FastAPI + واجهة ويب مخصصة.'],tags:['Python','FastAPI','Claude API','متعدد الوكلاء','بث فوري'],gh:true,cs:'research'},{icon:'🎓',featured:true,cat:'nlp platform',title:'MentorX — التعلم الشخصي',date:'06/2025 – 07/2025',desc:'',bullets:['منصة تعليمية تكيفية متكاملة مع خلفية API.','الذكاء الاصطناعي يحلل أداء الطالب لتوليد اختبارات مخصصة.','تلخيص متعدد الوسائط لملفات PDF ومقاطع الفيديو والصوت.'],tags:['نماذج اللغة','Python','RAG','ذكاء متعدد الوسائط','تقنية التعليم'],gh:true,cs:'mentorx'},{icon:'🏫',featured:true,cat:'nlp platform',title:'منصة Lumiq للتعليم',date:'نظام ذكاء اصطناعي متكامل',desc:'',bullets:['منصة شاملة للطلاب والمعلمين وأولياء الأمور.','نظام RAG يجيب على الأسئلة من المواد المرفوعة.','استيعاب المستندات: PDF, DOCX, TXT.'],tags:['Python','Flask','MongoDB','نماذج اللغة','RAG'],gh:true},{icon:'🦷',featured:false,cat:'cv',title:'DentalDiagnosisAI',date:'رؤية حاسوبية · YOLOv8 + EfficientNetV2',desc:'',bullets:['كشف أمراض الأسنان وتصنيف الشدة من الصور.','YOLOv8 للكشف + EfficientNetV2 للتصنيف.','قابلية التفسير بـ Grad-CAM + واجهة Gradio.'],tags:['YOLOv8','EfficientNetV2','Grad-CAM','Gradio'],gh:true},{icon:'🔧',featured:false,cat:'nlp',title:'CodeT5 + LoRA — مصحح الأكواد',date:'05/2025 – 06/2025',desc:'',bullets:['ضبط دقيق لـ CodeT5 بـ LoRA لتصحيح الأكواد تلقائياً.','كشف أخطاء الصياغة والمنطق بتكلفة حسابية منخفضة.'],tags:['PyTorch','LoRA','HuggingFace','CodeT5'],gh:true}],
     moreGh:'🐙 المزيد من المشاريع على GitHub',
-    timeline:[
-      {date:'2026',title:'مؤسس — سرايا AI',desc:'أسست سرايا AI — بناء منصات ذكاء اصطناعي متقدمة وأنظمة ذكية لحل تحديات العالم الحقيقي.'},
-      {date:'06/2025 – 07/2025',title:'MentorX — التعلم الشخصي',desc:'منصة تعليمية تكيفية متكاملة مع تلخيص متعدد الوسائط وتوليد اختبارات مخصصة وخطط دراسية تكيفية.'},
-      {date:'05/2025 – 06/2025',title:'ضبط دقيق CodeT5 + LoRA',desc:'ضبط دقيق فعال لتصحيح الأكواد تلقائياً باستخدام LoRA على PyTorch وHuggingFace.'},
-      {date:'2024',title:'منصة Lumiq التعليمية',desc:'منصة تعليمية ذكاء اصطناعي متكاملة: مساعد LLM، خط RAG، لوحات تحكم متعددة الأدوار، ومعمارية MongoDB.'},
-      {date:'2023 – 2024',title:'مشاريع بحث الذكاء الاصطناعي',desc:'VehicleDamageAI وAspectSentimentAI وDentalDiagnosisAI — تطبيق نماذج حديثة على مشاكل حقيقية.'},
-      {date:'2021 – 2026',title:'بكالوريوس هندسة الذكاء الاصطناعي',desc:'جامعة بهشهير · إسطنبول، تركيا'}
-    ],
-    certs:[
-      {icon:'🧠',title:'الذكاء الاصطناعي وتعلم الآلة',tags:['التعلم العميق مع PyTorch — IBM','التعلم العميق مع Keras وTF — IBM','تعلم الآلة مع Python — IBM','مشروع تخرج الذكاء الاصطناعي — IBM','تعلم الآلة التطبيقي — ألبرتا']},
-      {icon:'✨',title:'الذكاء الاصطناعي التوليدي ونماذج اللغة',tags:['نماذج الذكاء الاصطناعي التأسيسية — IBM','مقدمة الذكاء الاصطناعي التوليدي — IBM','هندسة الموجهات — IBM','أخلاقيات الذكاء الاصطناعي التوليدي — IBM']},
-      {icon:'☁️',title:'السحابة وعمليات النماذج',tags:['MLOps: SageMaker وAzure — Duke','خدمات Azure السحابية — Microsoft','الخدمات المصغرة وRedis على GCP — Google']},
-      {icon:'📊',title:'علم البيانات وإدارة المشاريع',tags:['منهجية علم البيانات — IBM','Python لعلم البيانات — IBM','إدارة المشاريع الرشيقة — CU Boulder','أخلاقيات التكنولوجيا والهندسة — TU/e']}
-    ],
-    testimonials:[
-      {text:'العمل مع العز في مشروع التخرج MentorX كان استثنائياً. قاد معمارية الذكاء الاصطناعي من اليوم الأول — محرك الاختبارات التكيفي وخط الاستيعاب متعدد الوسائط الذي بناه تجاوز توقعاتنا بكثير. مهندس موهوب حقاً.',name:'مهند زنيرني',role:'عضو فريق مشروع تخرج MentorX',avatar:'🎓'},
-      {text:'العز من أكثر مهندسي الذكاء الاصطناعي تركيزاً الذين عملت معهم. يُظهر عمله في وكيل الصوت لدى سرايا AI فهماً عميقاً لأنظمة الوقت الفعلي ومعالجة اللغة العربية وتجربة المستخدم — كل ذلك في وقت واحد.',name:'د. خالد ناصر',role:'قائد بحث الذكاء الاصطناعي · مؤسسة أكاديمية',avatar:'🤖'}
-    ],
-    blogCards:[
-      {id:'voice',tag:'الذكاء الصوتي · هندسة',title:'كيف بنيت وكيل صوتي عربي بزمن استجابة فوري باستخدام Whisper + Claude',desc:'كشف كلمة التنبيه، TTS التعبيري، وتحديات زمن الاستجابة أقل من ثانيتين.',time:'8'},
-      {id:'agents',tag:'المعمارية · نماذج اللغة',title:'وكلاء الذكاء الاصطناعي مقابل خطوط RAG: متى تستخدم أيهما',desc:'شرح القرار المعماري مع أمثلة حقيقية من مشاريعي.',time:'6'},
-      {id:'llmprod',tag:'MLOps · الإنتاج',title:'ما تعلمته من نشر نماذج اللغة الكبيرة في الإنتاج',desc:'البث، معالجة الأخطاء، إدارة التكاليف، وتحسين زمن الاستجابة.',time:'10'},
-      {id:'multiagent',tag:'متعدد الوكلاء · تصميم',title:'تصميم أنظمة متعددة الوكلاء تعمل فعلاً',desc:'أدوار الوكلاء، بروتوكولات التواصل، والتعافي من الأعطال.',time:'7'},
-      {id:'journey',tag:'المسيرة المهنية · الذكاء الاصطناعي',title:'من طالب ذكاء اصطناعي إلى مؤسس شركة: رحلتي',desc:'كيف انتقلت من بناء أول شبكة عصبية إلى تأسيس سرايا AI.',time:'5'},
-      {id:'dental',tag:'رؤية حاسوبية · طبي',title:'بناء DentalDiagnosisAI: شرح YOLOv8 + Grad-CAM',desc:'الجمع بين الكشف والقابلية للتفسير لبناء أداة تشخيص موثوقة.',time:'9'}
-    ],
+    timeline:[{date:'2026 – حتى الآن',title:'مؤسس ومهندس ذكاء اصطناعي — سرايا AI',desc:'أسست سرايا AI — بناء وكلاء صوتيين متقدمين، ومنصات بحث متعددة الوكلاء، وأنظمة ذكية لحل تحديات العالم الحقيقي.'},{date:'02/2026 – حتى الآن',title:'مقيّم النصوص الصوتية — Uber AI Solutions (عن بُعد)',desc:'حسّنت دقة بيانات اللغة العربية على نطاق واسع لنماذج الذكاء الاصطناعي الصوتي. وظّفت خبرتي باللغة العربية لتحسين الدقة الثقافية وقيادة سير عمل التوسيم.'},{date:'12/2024 – 06/2025',title:'قائد فريق الذكاء الاصطناعي — MentorX، مشروع تخرج جامعة بهشهير',desc:'قدت فريقاً من 5 طلاب لتصميم وتسليم MentorX، منصة تعليمية مدعومة بنموذج لغوي. بنيت الخلفية وهندست طبقة الموجهات وأدرت خطوط استيعاب المحتوى.'}],
+    education:[{date:'09/2021 – 01/2026',title:'بكالوريوس هندسة الذكاء الاصطناعي',desc:'جامعة بهشهير · إسطنبول، تركيا · تخرجت يناير 2026'}],
+    certs:[{icon:'🧠',title:'الذكاء الاصطناعي وتعلم الآلة',tags:['التعلم العميق مع PyTorch — IBM','التعلم العميق مع Keras وTF — IBM','تعلم الآلة مع Python — IBM','مشروع تخرج الذكاء الاصطناعي — IBM','تعلم الآلة التطبيقي — ألبرتا']},{icon:'✨',title:'الذكاء الاصطناعي التوليدي ونماذج اللغة',tags:['نماذج الذكاء الاصطناعي التأسيسية — IBM','مقدمة الذكاء الاصطناعي التوليدي — IBM','هندسة الموجهات — IBM','أخلاقيات الذكاء الاصطناعي التوليدي — IBM']},{icon:'☁️',title:'السحابة وعمليات النماذج',tags:['MLOps: SageMaker وAzure — Duke','خدمات Azure السحابية — Microsoft','الخدمات المصغرة وRedis على GCP — Google']},{icon:'📊',title:'علم البيانات وإدارة المشاريع',tags:['منهجية علم البيانات — IBM','Python لعلم البيانات — IBM','إدارة المشاريع الرشيقة — CU Boulder','أخلاقيات التكنولوجيا والهندسة — TU/e']}],
+    testimonials:[{text:'العمل مع العز في مشروع التخرج MentorX كان استثنائياً. قاد معمارية الذكاء الاصطناعي من اليوم الأول — محرك الاختبارات التكيفي وخط الاستيعاب متعدد الوسائط الذي بناه تجاوز توقعاتنا بكثير.',name:'مهند زنيرني',role:'عضو فريق مشروع تخرج MentorX',avatar:'🎓'},{text:'العز من أكثر مهندسي الذكاء الاصطناعي تركيزاً الذين عملت معهم. يُظهر عمله في وكيل الصوت لدى سرايا AI فهماً عميقاً لأنظمة الوقت الفعلي ومعالجة اللغة العربية وتجربة المستخدم.',name:'د. خالد ناصر',role:'قائد بحث الذكاء الاصطناعي · مؤسسة أكاديمية',avatar:'🤖'}],
+    blogCards:[{id:'voice',tag:'الذكاء الصوتي · هندسة',title:'كيف بنيت وكيل صوتي عربي بزمن استجابة فوري',desc:'كشف كلمة التنبيه، TTS التعبيري، وتحديات زمن الاستجابة أقل من ثانيتين.',time:'8'},{id:'agents',tag:'المعمارية · نماذج اللغة',title:'وكلاء الذكاء الاصطناعي مقابل خطوط RAG',desc:'شرح القرار المعماري مع أمثلة حقيقية من مشاريعي.',time:'6'},{id:'llmprod',tag:'MLOps · الإنتاج',title:'ما تعلمته من نشر نماذج اللغة الكبيرة في الإنتاج',desc:'البث، معالجة الأخطاء، إدارة التكاليف، وتحسين زمن الاستجابة.',time:'10'},{id:'multiagent',tag:'متعدد الوكلاء · تصميم',title:'تصميم أنظمة متعددة الوكلاء تعمل فعلاً',desc:'أدوار الوكلاء، بروتوكولات التواصل، والتعافي من الأعطال.',time:'7'},{id:'journey',tag:'المسيرة المهنية · الذكاء الاصطناعي',title:'من طالب ذكاء اصطناعي إلى مؤسس شركة: رحلتي',desc:'كيف انتقلت من بناء أول شبكة عصبية إلى تأسيس سرايا AI.',time:'5'},{id:'dental',tag:'رؤية حاسوبية · طبي',title:'بناء DentalDiagnosisAI: شرح YOLOv8 + Grad-CAM',desc:'الجمع بين الكشف والقابلية للتفسير لبناء أداة تشخيص موثوقة.',time:'9'}],
     readTime:'دقائق قراءة',
-    footerNav:['عني','المهارات','المشاريع','الخبرة','الشهادات','التوصيات','المدونة','تواصل'],
-    footerLinks:['#about','#skills','#projects','#experience','#certifications','#testimonials','#blog','#contact'],
+    footerNav:['عني','المهارات','المشاريع','الخبرة','التعليم','الشهادات','المدونة','تواصل'],
+    footerLinks:['#about','#skills','#projects','#experience','#education','#certifications','#blog','#contact'],
     footerCopy:'© 2026 <span>العز الدميني</span> · جميع الحقوق محفوظة.',
     footerRole:'مهندس ذكاء اصطناعي ومؤسس، سرايا AI',
     ph:['اسمك','بريدك الإلكتروني','الموضوع','رسالتك'],
@@ -696,8 +532,6 @@ var T={
   }
 };
 
-// ─── RENDER ENGINE ────────────────────────────────────────────────────────
-
 function render(lang){
   var t=T[lang];
   var isAr=lang==='ar';
@@ -705,109 +539,46 @@ function render(lang){
   document.documentElement.lang=lang;
   document.getElementById('langEN').classList.toggle('active-lang',!isAr);
   document.getElementById('langAR').classList.toggle('active-lang',isAr);
-
-  // data-key simple text elements
   document.querySelectorAll('[data-key]').forEach(function(el){
     var k=el.dataset.key;
     if(k==='role')el.textContent=t.role;
     else if(k==='btn1')el.textContent=t.btn1;
     else if(k==='btn2')el.textContent=t.btn2;
+    else if(k==='btn3')el.textContent=t.btn3;
     else if(k.startsWith('stat'))el.textContent=t.stats[parseInt(k.slice(4))];
     else if(k.startsWith('lbl_'))el.textContent=t['lbl_'+k.slice(4)];
     else if(k.startsWith('h2_'))el.textContent=t['h2_'+k.slice(3)];
     else if(k==='infoTitle')el.textContent=t.infoTitle;
     else if(k.startsWith('il'))el.textContent=t.il[parseInt(k.slice(2))];
     else if(k.startsWith('iv'))el.innerHTML=t.iv[parseInt(k.slice(2))];
+    else if(k==='lbl_edu')el.textContent=t.lbl_edu;
+    else if(k==='h2_edu')el.textContent=t.h2_edu;
     else if(k==='contactDesc')el.textContent=t.contactDesc;
-    else if(k==='sendBtn')el.textContent=t.sendBtn;
-    else if(k==='nav'+'0'){}// handled below
   });
-
-  // badge
   document.getElementById('heroBadge').innerHTML='<span class="dot"></span>'+t.badge;
-
-  // hero name
   document.getElementById('heroName').textContent=lang==='ar'?'العز الدميني':'Alezz Aldumaini';
-
-  // nav links
   var navAs=document.querySelectorAll('#navLinks a');
   t.nav.forEach(function(txt,i){if(navAs[i])navAs[i].textContent=txt;});
-
-  // about text
   document.getElementById('aboutText').innerHTML=t.aboutPs.map(function(p){return '<p>'+p+'</p>';}).join('');
-
-  // skills
-  document.getElementById('skillGrid').innerHTML=t.skills.map(function(s){
-    return '<div class="skill-card"><h3>'+s.icon+' '+s.title+'</h3><div class="tags">'+s.tags.map(function(tag){return '<span class="tag">'+tag+'</span>';}).join('')+'</div></div>';
-  }).join('');
-
-  // filter bar
-  document.getElementById('filterBar').innerHTML=t.filters.map(function(f,i){
-    return '<button class="filter-btn'+(i===0?' active':'')+'" data-filter="'+t.filterKeys[i]+'">'+f+'</button>';
-  }).join('');
-
-  // projects
-  document.getElementById('projGrid').innerHTML=t.projects.map(function(p){
-    var links='';
-    if(p.gh)links+='<a href="https://github.com/Aalezz" target="_blank" class="proj-link proj-link-gh">'+t.ghBtn+'</a>';
-    if(p.demo)links+='<a href="https://aalezz.github.io/suraya-ai/" target="_blank" class="proj-link proj-link-demo">'+t.demoBtn+'</a>';
-    if(p.cs)links+='<button class="case-study-btn" onclick="openCS(\''+p.cs+'\')">'+t.csBtn+'</button>';
-    return '<div class="proj-card" data-cat="'+p.cat+'">'+(p.featured?'<span class="featured-badge">'+t.featuredLabel+'</span>':'')+
-      '<div class="proj-header"><div class="proj-icon">'+p.icon+'</div><div class="proj-title"><h3>'+p.title+'</h3><div class="proj-date">'+p.date+'</div></div></div>'+
-      (p.desc?'<p>'+p.desc+'</p>':'')+
-      '<ul class="proj-bullets">'+p.bullets.map(function(b){return '<li>'+b+'</li>';}).join('')+'</ul>'+
-      '<div class="proj-tags">'+p.tags.map(function(tag){return '<span class="proj-tag">'+tag+'</span>';}).join('')+'</div>'+
-      '<div class="proj-links">'+links+'</div></div>';
-  }).join('');
-
-  // more gh button
+  document.getElementById('skillGrid').innerHTML=t.skills.map(function(s){return '<div class="skill-card"><h3>'+s.icon+' '+s.title+'</h3><div class="tags">'+s.tags.map(function(tag){return '<span class="tag">'+tag+'</span>';}).join('')+'</div></div>';}).join('');
+  document.getElementById('filterBar').innerHTML=t.filters.map(function(f,i){return '<button class="filter-btn'+(i===0?' active':'')+'" data-filter="'+t.filterKeys[i]+'">'+f+'</button>';}).join('');
+  document.getElementById('projGrid').innerHTML=t.projects.map(function(p){var links='';if(p.gh)links+='<a href="https://github.com/Aalezz" target="_blank" class="proj-link proj-link-gh">'+t.ghBtn+'</a>';if(p.demo)links+='<a href="https://aalezz.github.io/suraya-ai/" target="_blank" class="proj-link proj-link-demo">'+t.demoBtn+'</a>';if(p.cs)links+='<button class="case-study-btn" onclick="openCS(\''+p.cs+'\')">'+t.csBtn+'</button>';return '<div class="proj-card" data-cat="'+p.cat+'">'+(p.featured?'<span class="featured-badge">'+t.featuredLabel+'</span>':'')+'<div class="proj-header"><div class="proj-icon">'+p.icon+'</div><div class="proj-title"><h3>'+p.title+'</h3><div class="proj-date">'+p.date+'</div></div></div>'+(p.desc?'<p>'+p.desc+'</p>':'')+'<ul class="proj-bullets">'+p.bullets.map(function(b){return '<li>'+b+'</li>';}).join('')+'</ul><div class="proj-tags">'+p.tags.map(function(tag){return '<span class="proj-tag">'+tag+'</span>';}).join('')+'</div><div class="proj-links">'+links+'</div></div>';}).join('');
   document.getElementById('moreGhBtn').textContent=t.moreGh;
+  document.getElementById('timelineEl').innerHTML=t.timeline.map(function(item){return '<div class="tl-item"><div class="tl-date">'+item.date+'</div><h3>'+item.title+'</h3><p>'+item.desc+'</p></div>';}).join('');
+  document.getElementById('educationEl').innerHTML=t.education.map(function(item){return '<div class="tl-item"><div class="tl-date">'+item.date+'</div><h3>'+item.title+'</h3><p>'+item.desc+'</p></div>';}).join('');
+  document.getElementById('certGrid').innerHTML=t.certs.map(function(c){return '<div class="skill-card"><h3>'+c.icon+' '+c.title+'</h3><div class="tags">'+c.tags.map(function(tag){return '<span class="tag">'+tag+'</span>';}).join('')+'</div></div>';}).join('');
 
-  // timeline
-  document.getElementById('timelineEl').innerHTML=t.timeline.map(function(item){
-    return '<div class="tl-item"><div class="tl-date">'+item.date+'</div><h3>'+item.title+'</h3><p>'+item.desc+'</p></div>';
-  }).join('');
-
-  // certs
-  document.getElementById('certGrid').innerHTML=t.certs.map(function(c){
-    return '<div class="skill-card"><h3>'+c.icon+' '+c.title+'</h3><div class="tags">'+c.tags.map(function(tag){return '<span class="tag">'+tag+'</span>';}).join('')+'</div></div>';
-  }).join('');
-
-  // testimonials
-  document.getElementById('testimonialsGrid').innerHTML=t.testimonials.map(function(t2){
-    return '<div class="testimonial-card"><div class="quote-mark">"</div><p class="testimonial-text">'+t2.text+'</p><div class="testimonial-author"><div class="author-avatar">'+t2.avatar+'</div><div><div class="author-name">'+t2.name+'</div><div class="author-role">'+t2.role+'</div><div class="author-stars">★★★★★</div></div></div></div>';
-  }).join('');
-
-  // blog cards
-  document.getElementById('blogGrid').innerHTML=t.blogCards.map(function(b){
-    return '<div class="blog-card" onclick="openBlog(\''+b.id+'\')"><span class="blog-tag-el">'+b.tag+'</span><h3>'+b.title+'</h3><p>'+b.desc+'</p><div class="blog-meta"><span>⏱ '+b.time+' '+t.readTime+'</span><span class="blog-arrow">→</span></div></div>';
-  }).join('');
-
-  // footer nav
-  document.getElementById('footerNav').innerHTML=t.footerNav.map(function(n,i){
-    return '<a href="'+t.footerLinks[i]+'">'+n+'</a>';
-  }).join('');
+  document.getElementById('blogGrid').innerHTML=t.blogCards.map(function(b){return '<div class="blog-card" onclick="openBlog(\''+b.id+'\')"><span class="blog-tag-el">'+b.tag+'</span><h3>'+b.title+'</h3><p>'+b.desc+'</p><div class="blog-meta"><span>⏱ '+b.time+' '+t.readTime+'</span><span class="blog-arrow">→</span></div></div>';}).join('');
+  document.getElementById('footerNav').innerHTML=t.footerNav.map(function(n,i){return '<a href="'+t.footerLinks[i]+'">'+n+'</a>';}).join('');
   document.getElementById('footerCopy').innerHTML=t.footerCopy;
-
-  // form placeholders & button
   var phs=['cf-name','cf-email','cf-subject','cf-message'];
   phs.forEach(function(id,i){document.getElementById(id).placeholder=t.ph[i];});
   document.getElementById('cf-btn').textContent=t.sendBtn;
-
-  // typed text
-  phrases.length=0;
-  t.typing.forEach(function(p){phrases.push(p);});
-  pi=0;ci=0;deleting=false;typedEl.textContent='';
-  clearTimeout(typingTimer);
-  setTimeout(runTyping,500);
+  phrases.length=0;t.typing.forEach(function(p){phrases.push(p);});
+  pi=0;ci=0;deleting=false;typedEl.textContent='';clearTimeout(typingTimer);setTimeout(runTyping,500);
 }
 
-function setLang(lang){
-  currentLang=lang;
-  render(lang);
-}
-
-// Initial render
+function setLang(lang){currentLang=lang;render(lang);}
 render('en');
 setTimeout(runTyping,800);
 </script>
